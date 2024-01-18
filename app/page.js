@@ -1,8 +1,8 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import styles from './page.module.css'
-import CTA from '@/components/CTA'
-import Banner from '@/components/Banner'
+import Banner from '@/components/banner'
+import CTA from '@/components/cta'
 
 export default function Home() {
   return (

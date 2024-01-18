@@ -7,7 +7,7 @@ import classes from '../navigation.module.css';
 const Navbar = ({ toggle }) => {
     return (
         <>
-            <div className="w-full h-20 bg-emerald-800 sticky top-0">
+            <div className="w-full h-20 text-end sticky top-0 transition-all duration-300">
                 <div className="container mx-auto px-4 h-full">
                     <div className="flex justify-between items-center h-full">
                         <Logo />
@@ -23,39 +23,42 @@ const Navbar = ({ toggle }) => {
                                 viewBox="0 0 24 24"
                             >
                                 <path
-                                    fill="#fff"
+                                    fill="#ffffff"
                                     d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"
                                 />
                             </svg>
                         </button>
-                        <ul className="hidden md:flex gap-x-6 text-white ">
-                            <li>
-                                <Link href="/about">Acerca de mi</Link>
+                        <ul className="hidden md:flex gap-x-6 text-white">
+                            <li className={classes.link}>
+                                <Link href="/about">Acerca de mí</Link>
                             </li>
-                            <li>
+                            <li className={classes.link}>
                                 <Link href="/services">Servicios</Link>
                             </li>
-                            <li>
-                                <Link href="/services/share">Compartir</Link>
-                            </li>
-                            <li>
-                                <Link href="/contact">Contacto</Link>
-                            </li>
-                            <li>
+                            <li className={classes.link}>
                                 <Link href="/testimony">Testimonios</Link>
                             </li>
-                            <li>
-                                <Link href="/resources">Recursos Descargables</Link>
+                            <li className={`${classes.link} relative group pb-1`}>
+                                <span className={classes.link}>Información</span>
+                                <ul className="absolute hidden group-hover:block bg-light text-white p-2 space-y-2">
+                                    <li>
+                                        <Link href="/resources">Descargables</Link>
+                                    </li>
+                                    <li>
+                                        <Link href="/gallery">Galería</Link>
+                                    </li>
+
+                                    <li>
+                                        <Link href="/faq">Preguntas Frecuentes</Link>
+                                    </li>
+
+                                </ul>
                             </li>
-                            <li>
-                                <Link href="/gallery">Galeria</Link>
-                            </li>
-                            <li>
-                                <Link href="/faq">Preguntas Frecuentes</Link>
-                            </li>
-                            <li>
+                            <li className={classes.link}>
                                 <Link href="/blog">Blog</Link>
                             </li>
+
+
                         </ul>
                         <div className="hidden md:block">
                             <Button />
