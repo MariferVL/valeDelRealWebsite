@@ -1,16 +1,28 @@
+"use client";
 import Link from "next/link";
 import Image from "next/image";
+import { useState } from 'react'; 
+import { FaBars } from 'react-icons/fa';  
 import logoHorizontal from '@/assets/logoHorizontal.png'
-import classes from '@/components/main-header.module.css'
+import classes from '@/components/main-header.module.css';
 
 export default function MainHeader() {
+    const [showNav, setShowNav] = useState(false); 
+
+    const toggleNavHandler = () => {
+        setShowNav((prevShowNav) => !prevShowNav);
+    };
+
     return (
         <header className={classes.header}>
             <Link className={classes.logo} href="/">
                 <Image src={logoHorizontal} alt="Logo de Escuela Sexualidad Sagrada color amarillo y rojo" />
                 Escuela de Sexualidad Sagrada Latinoamericana
             </Link>
-            <nav className={classes.nav}>
+            <div className={classes.menuIcon} onClick={toggleNavHandler}>
+                <FaBars />
+            </div>
+            <nav className={`${classes.nav} ${showNav ? classes.show : ''}`}>
                 <ul>
                     <li>
                         <Link href="/about">Acerca de mi</Link>

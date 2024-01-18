@@ -1,0 +1,5 @@
+.banner {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    padding: 40px;
+  }
