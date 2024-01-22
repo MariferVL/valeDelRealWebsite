@@ -1,11 +1,9 @@
-import { Inter } from 'next/font/google'
+// import { Inter, Montserrat } from 'next/font/google'
 import './globals.css'
+import Footer from '@/components/footer'
+import Navigation from '@/components/navigation'
 
-import Navigation from '@/components/navigation';
-import Footer from '@/components/footer';
-import MainHeader from '@/components/main-header';
 
-const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
   title: 'Valeria Del Real',
@@ -15,12 +13,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="es">
-      <body className={inter.className}>
-        {/* <MainHeader /> */}
+      <body>
         <Navigation />
         {children}
         <Footer />
-        </body>
+      </body>
     </html>
   )
 }

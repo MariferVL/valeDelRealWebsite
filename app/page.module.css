@@ -1,17 +1,16 @@
-.hero {
-  position: fixed;
-  top: -44px;
-  left: -80px;
-  width: calc(100vw + 160px);
-  height: calc(100vh + 160px);
-  background-color: grey;
-  transition: transform 0.1s;
-  background-image: url('/images/valeria/mainPic.png');
-  background-size: cover;
-  background-repeat: no-repeat;
-  cursor: pointer; 
+/* Estilos locales en el componente Home o estilos CSS globales */
+.heroContainer {
+  position: relative;
+  height: 100vh; /* Ajusta según sea necesario */
+  overflow: hidden; /* Asegura que no haya desbordamiento */
 }
 
-.hero:hover {
-  cursor: pointer;
+.video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1; /* Ajusta según sea necesario, pero mayor que el z-index del Navbar */
 }

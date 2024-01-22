@@ -2,7 +2,6 @@
 import { useState } from "react";
 import Navbar from "./navbar";
 import Sidebar from "./sidebar";
-import classes from './navigation.module.css';
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
