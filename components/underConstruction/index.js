@@ -4,7 +4,7 @@ const UnderConstruction = () => {
     return (
         <div className="fixed top-0 left-0 w-full h-full overflow-auto">
             <Image
-                src="/images/UnderConstruction.svg"
+                src="/images/UnderConstruction.png"
                 alt="Under Construction"
                 layout="responsive"
                 width={1920}

@@ -1,5 +1,9 @@
+import UnderConstruction from "@/components/underConstruction";
+
 export default function ContactPage() {
     return <main>
-        <h1>Me encuentras en:</h1>
+        <UnderConstruction />
+
+        {/* <h1>Me encuentras en:</h1> */}
     </main>
 }
