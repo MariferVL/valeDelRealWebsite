@@ -40,15 +40,7 @@ const AboutPage = () => {
                             Con toda certeza, si estás aquí, es porque tenemos muchas cosas en común.
                             Quiero darte una cálida bienvenida a este Espacio que he llamado Escuela de Sexualidad Sagrada Latinoamericana, honrando de esta manera, a esta Tierra hermosa y rica, que constantemente nos nutre, tanto el cuerpo como el Alma.
                             Susurrando los antiguos Misterios que brotan para ser habitados, por quienes hemos decidido Caminar en Belleza y Corazón.
-
-                            Aquí encontrarás un espacio que podrás recorrer a tus tiempos.
-                            Dicen que para lo verdaderamente importante, no hay prisa…
-                            y por esto, todo cuanto entrego, también se ha ido gestando despacito, a fuego lento…
-                            Así cuando el cocimiento está listo, tiene ese sabor tan, tan especial, que nos embriaga simplemente, desde el placer de estar vivos…
-
-                            Te invito a descubrirte acompañado por todo lo que tengo preparado para ti.
-                            Está hecho con mucho amor y en un lenguaje simple y lúdico, que no le resta profundidad, y aporta una comprensión orgánica que te permitirá recordar esta sabiduría que ya traes desde adentro…
-
+                        
                             Valeria del Real
                         </p>
 

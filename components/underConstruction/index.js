@@ -6,7 +6,6 @@ const UnderConstruction = () => {
             <Image
                 src="/images/UnderConstruction.png"
                 alt="Under Construction"
-                layout="responsive"
                 width={1920}
                 height={1080}
             />
