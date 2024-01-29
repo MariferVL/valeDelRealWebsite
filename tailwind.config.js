@@ -12,6 +12,7 @@ module.exports = {
         end: '#e0a417',
         primary: '#e3a617',
         secondary: '#d82633',
+        icon: '#b81319',
         accent: '#d82933',
         text: '#ffffff',
         light: '#e3a61714'

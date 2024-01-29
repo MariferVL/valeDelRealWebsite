@@ -30,7 +30,7 @@ export default function Navigation() {
 
   return (
     <nav className="bg-primary p-2 fixed top-0 w-full z-10 backdrop-blur bg-opacity-30">
-      <div className="flex justify-between items-center  mx-4">
+      <div className="flex justify-between items-center mx-16">
         <Logo />
 
         {/* Hamburger icon for mobile */}
@@ -76,7 +76,7 @@ export default function Navigation() {
               </li>
             </ul>
           </li>
-          <li>
+          <li className="pr-3">
             <Link className="text-white hover:text-yellow-400 transition duration-300" href="/blog">Blog</Link>
           </li>
           <li className="flex justify-between items-center">

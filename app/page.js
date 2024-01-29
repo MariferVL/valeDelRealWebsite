@@ -1,5 +1,3 @@
-import Banner from '@/components/banner';
-import CTA from '@/components/cta';
 
 export default function Home() {
   return (
