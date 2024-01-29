@@ -109,16 +109,16 @@ export default function Navigation() {
       >
         <ul className="flex flex-col items-center space-y-4 p-8">
           <li>
-            <Link className="text-white hover:text-yellow-400 transition duration-300" href="/about">Acerca de mí</Link>
+            <Link className="text-white hover:text-yellow-400 transition duration-300" href="/about">Quién Soy</Link>
           </li>
           <li>
-            <Link className="text-white hover:text-yellow-400 transition duration-300" href="/services">Servicios</Link>
+            <Link className="text-white hover:text-yellow-400 transition duration-300" href="/services">Servicios Terapéuticos</Link>
           </li>
           <li>
-            <Link className="text-white hover:text-yellow-400 transition duration-300" href="/testimony">Testimonios</Link>
+            <Link className="text-white hover:text-yellow-400 transition duration-300" href="/testimony">Experiencias</Link>
           </li>
           <li>
-            <Link className="text-white hover:text-yellow-400 transition duration-300" href="/resources">Descargables</Link>
+            <Link className="text-white hover:text-yellow-400 transition duration-300" href="/downloads">Descargables</Link>
           </li>
           <li>
             <Link className="text-white hover:text-yellow-400 transition duration-300" href="/gallery">Galería</Link>
