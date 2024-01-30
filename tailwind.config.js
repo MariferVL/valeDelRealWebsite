@@ -17,6 +17,12 @@ module.exports = {
         text: '#ffffff',
         light: '#e3a61714'
       },
+      spacing: {
+        '885': '885px',
+        '474': '474px',
+        '318' : '318px',
+        '111' : '111px',
+      }
     },
   },
   plugins: [],
