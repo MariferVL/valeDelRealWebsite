@@ -3,15 +3,18 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap');
+
 
 :root {
-  --primary-color: #e3a617;
-  --secondary-color: #d82633;
-  --light-color: #e3a61714;
-  --accent-color: #d82933;
-  --text-color: #ffffff;
-  --initial-color: #e8c900;
-  --end-color: #e0a417;
+  --initial: #e8c900;
+  --end: #e0a417;
+  --primary: #e3a617;
+  --secondary: #d82633;
+  --accent: #d82933;
+  --text: #ffffff;
+  --light: #e3a61714;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -56,13 +59,11 @@
 
 html,
 body {
-  max-width: 100vw;
   margin: 0;
-  overflow: hidden;
 }
 
 body {
-
+  overflow: visible; 
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
