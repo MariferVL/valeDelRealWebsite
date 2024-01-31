@@ -6,7 +6,7 @@ const Button = () => {
       <Link href="/">
       <Image
         src="/images/logos/mainLogo.png"
-        alt="Logo de Escuela de Sexualidad Sagrada Latinoamericana"
+        alt="Logo"
         width={100}
         height={100}
         className="relative"

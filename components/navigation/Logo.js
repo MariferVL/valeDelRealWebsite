@@ -36,9 +36,9 @@ const Logo = () => {
   return (
     <>
       <Link href="/" style={{ display: showButton ? "none" : "block" }}>
-        <Image
+        <Image 
           src="/images/logos/mainLogo.png"
-          alt="Logo de Escuela de Sexualidad Sagrada Latinoamericana"
+          alt="Logo"
           width={width < 1024 ? 80 : 140}
           height={width < 1024 ? 23 : 36}
           className="relative"
