@@ -4,6 +4,7 @@
     "indexes": "firestore.indexes.json"
   },
   "hosting": {
+    "site": "valeriadelreal",
     "source": ".",
     "ignore": [
       "firebase.json",

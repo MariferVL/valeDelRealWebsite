@@ -19,34 +19,13 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 20, 20, 20;
-    --background-end-rgb: 10, 10, 10;
-
-    --primary-glow: radial-gradient(rgba(255, 193, 7, 0.4), rgba(255, 193, 7, 0));
-    --secondary-glow: linear-gradient(
-      to bottom right,
-      rgba(255, 193, 7, 0),
-      rgba(255, 193, 7, 0),
-      rgba(255, 193, 7, 0.3)
-    );
-
-    --tile-start-rgb: 10, 10, 10;
-    --tile-end-rgb: 5, 5, 5;
-    --tile-border: conic-gradient(
-      #ffffff80,
-      #ffffff40,
-      #ffffff30,
-      #ffffff20,
-      #ffffff10,
-      #ffffff10,
-      #ffffff80
-    );
-
-    --callout-rgb: 30, 30, 30;
-    --callout-border-rgb: 150, 150, 150;
-    --card-rgb: 40, 40, 40;
-    --card-border-rgb: 80, 80, 80;
+    --initial: #e8c900;
+    --end: #e0a417;
+    --primary: #e3a617;
+    --secondary: #d82633;
+    --accent: #d82933;
+    --text: #ffffff;
+    --light: #e3a61714;
   }
 }
 

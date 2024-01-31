@@ -3,18 +3,17 @@ import { useEffect, useState } from 'react';
 import Image from 'next/image';
 
 export default function UnderConstruction() {
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [windowWidth, setWindowWidth] = useState(0)
 
   useEffect(() => {
-    // Función para actualizar el ancho de la ventana
+    setWindowWidth(window.innerWidth);
+
     const handleResize = () => {
       setWindowWidth(window.innerWidth);
     };
 
-    // Agrega el listener para escuchar cambios en el tamaño de la pantalla
     window.addEventListener('resize', handleResize);
 
-    // Limpia el listener cuando el componente se desmonta
     return () => {
       window.removeEventListener('resize', handleResize);
     };

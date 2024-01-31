@@ -60,6 +60,7 @@ const AboutPage = () => {
                 <div className="w-full lg:w-2/5">
                     <Image
                         src="https://source.unsplash.com/MP0IUfwrn0A"
+                        alt="Fondo con imagen de una pequeña cascada y bosque"
                         className="rounded-none lg:rounded-lg shadow-2xl hidden lg:block"
                         width={800}
                         height={600}
