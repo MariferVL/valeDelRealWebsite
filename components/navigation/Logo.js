@@ -1,19 +1,19 @@
+// Logo.js
 "use client";
 import Image from "next/image";
 import Link from "next/link";
 import Button from "./Button";
 
-const Logo = ({ showButton, showImage }) => {
+const Logo = ({ showButton, logoSrc }) => {
   return (
     <>
       <Link href="/" className={`block w-40 mx-auto ${showButton ? 'hidden' : 'block'}`}>
         <Image
-          src={showImage ? "/images/logos/mainLogo2.png" : "/images/logos/mainLogo1.png"}
+          src={logoSrc}
           alt="Logo"
           width={974}
           height={429}
         />
-
       </Link>
       <div
         style={{
