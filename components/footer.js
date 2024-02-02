@@ -12,7 +12,7 @@ export default function Footer() {
         <div className="flex mt-4 flex-col md:flex-row md:justify-between">
           <p className="w-full text-sm lg:text-md md:w-2/3 text-gray-600">En nuestro rincón de bienestar, estamos aquí para ti en cada paso de tu camino. Si tienes alguna pregunta o necesitas apoyo, no dudes en contactarnos. Creemos en construir juntos un camino hacia el bienestar.</p>
           <div className="w-44 pt-3 md:pt-0">
-            <Link href="/contact" className="bg-primary justify-center text-center font-bold rounded-lg shadow px-10 py-3 flex items-center">Contáctanos</Link>
+            <Link href="/contacto" className="bg-primary justify-center text-center font-bold rounded-lg shadow px-10 py-3 flex items-center">Contáctanos</Link>
           </div>
         </div>
         <div className="flex flex-col">
@@ -20,10 +20,10 @@ export default function Footer() {
             <div>
               <Logo />
             </div>
-            <Link href="/about" className="hidden md:block cursor-pointer text-gray-600 hover:text-primary uppercase">About</Link>
-            <Link href="/services" className="hidden md:block cursor-pointer text-gray-600 hover:text-primary uppercase">Services</Link>
-            <Link href="/testimony" className="hidden md:block cursor-pointer text-gray-600 hover:text-primary uppercase">Why us</Link>
-            <Link href="/contact" className="hidden md:block cursor-pointer text-gray-600 hover:text-primary uppercase">Contact</Link>
+            <Link href="/acerca-de-mi" className="hidden md:block cursor-pointer text-gray-600 hover:text-primary uppercase">About</Link>
+            <Link href="/servicios" className="hidden md:block cursor-pointer text-gray-600 hover:text-primary uppercase">Services</Link>
+            <Link href="/testimonios" className="hidden md:block cursor-pointer text-gray-600 hover:text-primary uppercase">Why us</Link>
+            <Link href="/contacto" className="hidden md:block cursor-pointer text-gray-600 hover:text-primary uppercase">Contact</Link>
             <div className="flex flex-row space-x-2 lg:space-x-4 items-center justify-between">
               <Link href="https://www.instagram.com/valeriadelreald" target="_blank" rel="noopener noreferrer">
                 <FaInstagram className="text-xl text-icon hover:text-yellow-400 transition duration-300" />

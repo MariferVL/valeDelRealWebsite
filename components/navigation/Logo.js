@@ -1,47 +1,17 @@
 "use client";
-import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Button from "./Button";
 
-const Logo = () => {
-  //update the size of the logo when the size of the screen changes
-  const [width, setWidth] = useState(0);
-
-  const updateWidth = () => {
-    const newWidth = window.innerWidth;
-    setWidth(newWidth);
-  };
-
-  useEffect(() => {
-    window.addEventListener("resize", updateWidth);
-    updateWidth();
-  }, []);
-
-  // change between the logo and the button when the user scrolls
-  const [showButton, setShowButton] = useState(false);
-
-  const changeNavButton = () => {
-    if (window.scrollY >= 400 && window.innerWidth < 768) {
-      setShowButton(true);
-    } else {
-      setShowButton(false);
-    }
-  };
-
-  useEffect(() => {
-    window.addEventListener("scroll", changeNavButton);
-  }, []);
-
+const Logo = ({ showButton, showImage, width }) => {
   return (
     <>
-      <Link href="/" style={{ display: showButton ? "none" : "block" }}>
-        <Image 
-          src="/images/logos/mainLogo.png"
+      <Link href="/"  className={`block w-32 mx-auto ${showButton ? 'hidden' : 'block'}`}>
+        <Image
+          src={showImage ? "/images/logos/mainLogo2.png" : "/images/logos/mainLogo1.png"}
           alt="Logo"
-          width={width < 1024 ? 80 : 140}
-          height={width < 1024 ? 23 : 36}
-          className="relative"
+          width={974}
+          height={429}
         />
 
       </Link>

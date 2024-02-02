@@ -1,7 +1,6 @@
 // about/page.js
 
 import Image from "next/image";
-import styles from './about.module.css';
 
 const AboutPage = () => {
     return (

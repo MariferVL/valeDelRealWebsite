@@ -20,7 +20,7 @@ export default function UnderConstruction() {
   }, []);
 
   const getVideoSrc = () => {
-    return windowWidth >= 768 ? '/videos/underConstructionVideolg.mp4' : '/videos/underConstructionVideosm.mp4';
+    return windowWidth > 700 ? '/videos/underConstructionVideolg.mp4' : '/videos/underConstructionVideosm.mp4';
   };
 
   return (
