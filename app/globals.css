@@ -10,10 +10,11 @@
   --initial: #e8c900;
   --end: #e0a417;
   --primary: #e3a617;
+  --light: #fde4a9;
   --secondary: #d82633;
   --accent: #d82933;
   --text: #ffffff;
-  --light: #e3a61714;
+  --translucid: #e3a61714;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -60,8 +61,6 @@ a {
 [data-hover] {
   position: relative;
   display: inline-block;
-  border-image: repeating-linear-gradient(30deg, #4d9f0c, #9198e5, #4d9f0c 20px) 60;
-
 }
 
 [data-hover]::before {

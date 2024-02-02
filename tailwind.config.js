@@ -15,7 +15,9 @@ module.exports = {
         icon: '#b81319',
         accent: '#d82933',
         text: '#ffffff',
-        light: '#e3a61714'
+        translucid: '#e3a61714',
+        light: '#fde4a9'
+
       },
       spacing: {
         '885': '885px',
