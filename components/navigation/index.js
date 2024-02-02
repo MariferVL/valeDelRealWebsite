@@ -7,52 +7,55 @@ import HoverLink from "../hoverlink";
 
 export default function Navigation() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-  const [scrollOpacity, setScrollOpacity] = useState(70);
   const [isScrolling, setIsScrolling] = useState(false);
   const [width, setWidth] = useState(0);
   const [showButton, setShowButton] = useState(false);
-
+  const [opacity, setOpacity] = useState(0.7);
+  const [blur, setBlur] = useState(10);
 
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
   };
 
-  const updateWidthAndScroll = () => {
-    const newWidth = window.innerWidth;
-    setWidth(newWidth);
-
-    const scrollY = window.scrollY;
-    const isMobile = newWidth < 768;
-
-    if (scrollY >= 400 && isMobile) {
-      setIsSidebarOpen(false);
-      setShowButton(true);
-      setIsScrolling(true);
-    } else if (scrollY <= 0) {
-      setIsScrolling(false);
-    } else {
-      setShowButton(false);
-      setIsScrolling(true);
-    }
-
-    const newOpacity = scrollY > 30 ? 30 : 70;
-    setScrollOpacity(newOpacity);
-  };
-
   useEffect(() => {
-    window.addEventListener("resize", updateWidthAndScroll);
-    window.addEventListener("scroll", updateWidthAndScroll);
+    const handleScroll = () => {
+      let currentScrollY = window.scrollY;
+      if (currentScrollY > 30) {
+        setIsScrolling(true);
+        setOpacity(0.3);
+        setBlur(5);
+      } else {
+        setIsScrolling(false);
+        setOpacity(0.7);
+        setBlur(10);
+      }
+    };
+
+    const handleResize = () => {
+      setWidth(window.innerWidth);
+      if (width < 768 && window.scrollY >= 400) {
+        setShowButton(true);
+      } else {
+        setShowButton(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("resize", handleResize);
 
     return () => {
-      window.removeEventListener("resize", updateWidthAndScroll);
-      window.removeEventListener("scroll", updateWidthAndScroll);
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("resize", handleResize);
     };
   }, []);
 
   return (
-    <nav className={`bg-primary p-2 fixed top-0 w-full z-10 backdrop-blur bg-opacity-${scrollOpacity}`}>
+    <nav
+      className={`p-2 fixed top-0 w-full z-10`}
+      style={{ backgroundColor: `rgba(227, 166, 23, ${opacity})`, backdropFilter: `blur(${blur}px)` }}
+    >
       <div className="flex justify-between items-center mx-16">
-        <Logo showButton={showButton} showImage={isScrolling} width={width} />
+        <Logo showButton={showButton} showImage={isScrolling} />
 
         {/* Hamburger icon for mobile */}
         <div className="cursor-pointer md:hidden" onClick={toggleSidebar}>
@@ -73,7 +76,7 @@ export default function Navigation() {
         </div>
 
         {/* Navbar Links for Desktop */}
-        <ul className="hidden md:flex space-x-4">
+        <ul className="hidden ml-80 md:flex space-x-2">
           <li>
             <HoverLink
               href="/acerca-de-mi"
@@ -81,6 +84,7 @@ export default function Navigation() {
               title="Descubre más sobre Valeria del Real"
               hoverText="Ingresa"
               activeText="Ingresando"
+              ariaLabel="Ir a sección acerca de mi"
             />
           </li>
 
@@ -91,28 +95,65 @@ export default function Navigation() {
               title="Explora los servicios que ofrece Valeria del Real"
               hoverText="Ingresa"
               activeText="Ingresando"
+              ariaLabel="Ir a la página de Servicios"
             />
           </li>
 
           <li>
-            <Link className="text-white hover:text-yellow-400 transition duration-300" href="/testimonios" title="Lee testimonios transformadores de clientes de Valeria del Real" aria-label="Ir a la página de Testimonios">Testimonios Transformadores</Link>
+            <HoverLink
+              href="/testimonios"
+              text="Testimonios Transformadores"
+              title="Lee testimonios transformadores de clientes de Valeria del Real"
+              hoverText="Ingresa"
+              activeText="Ingresando"
+              ariaLabel="Ir a la página de Testimonios"
+            />
           </li>
-          <li className="group relative text-white">
-            <span>Recursos</span>
+          <li className="group relative text-white flex items-center justify-center">
+            <span className={`inline-block relative mx-2 py-2 text-center text-white text-sm font-semibold`}
+            >Recursos</span>
             <ul className="absolute hidden group-hover:block bg-primary text-white p-2 space-y-2">
               <li>
-                <Link className="text-white hover:text-yellow-400 transition duration-300" href="/descargas" title="Descarga recursos espirituales gratuitos" aria-label="Ir a la página de Descargables Espirituales">Descargables Espirituales</Link>
+                <HoverLink
+                  href="/descargas"
+                  text="Descargables Espirituales"
+                  title="Descarga recursos espirituales gratuitos"
+                  hoverText="Ingresa"
+                  activeText="Ingresando"
+                  ariaLabel="Ir a la página de Descargables Espirituales"
+                />
               </li>
               <li>
-                <Link className="text-white hover:text-yellow-400 transition duration-300" href="/galeria" title="Explora la galería de imágenes de Valeria del Real" aria-label="Ir a la página de la Galería">Explora la Galería</Link>
+                <HoverLink
+                  href="/galeria"
+                  text="Explora la Galeria"
+                  title="Explora la galería de imágenes de Valeria del Real"
+                  hoverText="Ingresa"
+                  activeText="Ingresando"
+                  ariaLabel="Ir a la página de la Galería"
+                />
               </li>
               <li>
-                <Link className="text-white hover:text-yellow-400 transition duration-300" href="/preguntas-frecuentes" title="Encuentra respuestas a preguntas frecuentes" aria-label="Ir a la página de Preguntas Frecuentes">Preguntas Frecuentes</Link>
+                <HoverLink
+                  href="/preguntas-frecuentes"
+                  text="Preguntas Frecuentes"
+                  title="Encuentra respuestas a preguntas frecuentes"
+                  hoverText="Ingresa"
+                  activeText="Ingresando"
+                  ariaLabel="Ir a la página de Preguntas Frecuentes"
+                />
               </li>
             </ul>
           </li>
           <li className="pr-3">
-            <Link className="text-white hover:text-yellow-400 transition duration-300" href="/blog" title="Conoce el blog de Valeria del Real" aria-label="Ir al Blog">Conoce mi Blog</Link>
+            <HoverLink
+              href="/blog"
+              text="Conoce mi Blog"
+              title="Conoce el blog de Valeria del Real"
+              hoverText="Ingresa"
+              activeText="Ingresando"
+              ariaLabel="Ir al Blog"
+            />
           </li>
           <li className="flex justify-between items-center">
             <div className="flex gap-2">
@@ -145,25 +186,77 @@ export default function Navigation() {
       >
         <ul className="flex flex-col items-center space-y-4 p-8">
           <li>
-            <Link className="text-white hover:text-yellow-400 transition duration-300" href="/acerca-de-mi">Quién Soy</Link>
+            <HoverLink
+              href="/acerca-de-mi"
+              text="Descubre mi Esencia"
+              title="Descubre más sobre Valeria del Real"
+              hoverText="Ingresa"
+              activeText="Ingresando"
+              ariaLabel="Ir a sección acerca de mi"
+            />
+          </li>
+
+          <li>
+            <HoverLink
+              href="/servicios"
+              text="Explora mis Servicios"
+              title="Explora los servicios que ofrece Valeria del Real"
+              hoverText="Ingresa"
+              activeText="Ingresando"
+              ariaLabel="Ir a la página de Servicios"
+            />
+          </li>
+
+          <li>
+            <HoverLink
+              href="/testimonios"
+              text="Testimonios Transformadores"
+              title="Lee testimonios transformadores de clientes de Valeria del Real"
+              hoverText="Ingresa"
+              activeText="Ingresando"
+              ariaLabel="Ir a la página de Testimonios"
+            />
           </li>
           <li>
-            <Link className="text-white hover:text-yellow-400 transition duration-300" href="/servicios">Servicios Terapéuticos</Link>
+            <HoverLink
+              href="/descargas"
+              text="Descargables Espirituales"
+              title="Descarga recursos espirituales gratuitos"
+              hoverText="Ingresa"
+              activeText="Ingresando"
+              ariaLabel="Ir a la página de Descargables Espirituales"
+            />
           </li>
           <li>
-            <Link className="text-white hover:text-yellow-400 transition duration-300" href="/testimonios">Experiencias</Link>
+            <HoverLink
+              href="/galeria"
+              text="Explora la Galeria"
+              title="Explora la galería de imágenes de Valeria del Real"
+              hoverText="Ingresa"
+              activeText="Ingresando"
+              ariaLabel="Ir a la página de la Galería"
+            />
           </li>
           <li>
-            <Link className="text-white hover:text-yellow-400 transition duration-300" href="/downloads">Descargables</Link>
+            <HoverLink
+              href="/preguntas-frecuentes"
+              text="Preguntas Frecuentes"
+              title="Encuentra respuestas a preguntas frecuentes"
+              hoverText="Ingresa"
+              activeText="Ingresando"
+              ariaLabel="Ir a la página de Preguntas Frecuentes"
+            />
           </li>
-          <li>
-            <Link className="text-white hover:text-yellow-400 transition duration-300" href="/galeria">Galería</Link>
-          </li>
-          <li>
-            <Link className="text-white hover:text-yellow-400 transition duration-300" href="/preguntas-frecuentes">Preguntas Frecuentes</Link>
-          </li>
-          <li>
-            <Link className="text-white hover:text-yellow-400 transition duration-300" href="/blog">Blog</Link>
+
+          <li className="pr-3">
+            <HoverLink
+              href="/blog"
+              text="Conoce mi Blog"
+              title="Conoce el blog de Valeria del Real"
+              hoverText="Ingresa"
+              activeText="Ingresando"
+              ariaLabel="Ir al Blog"
+            />
           </li>
           <li className="flex justify-between items-center">
             <div className="flex gap-4">

@@ -1,14 +1,15 @@
 import Link from "next/link";
 
-export default function HoverLink({ href, text, title, hoverText, activeText }) {
+export default function HoverLink({ href, text, title, hoverText, activeText, ariaLabel }) {
     return (
         <Link
             href={href}
             title={title}
             data-hover={hoverText}
             data-active={activeText}
-            className={` inline-block relative m-4 p-2 text-white text-lg font-semibold transition-transform duration-300 ease-in-out hover:scale-95 active:scale-90`}
-            >
+            aria-label={ariaLabel}
+            className={`inline-block relative mx-2 py-2 text-center text-white text-sm font-semibold flex items-center justify-center`}
+        >
             <span >{text}</span>
 
         </Link>
