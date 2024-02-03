@@ -18,7 +18,7 @@ export default function Footer() {
         <div className="flex flex-col">
           <div className="flex mt-6 mb-3 flex-row justify-between items-center">
             <div>
-              <Logo />
+              <Logo showButton={false} logoSrc="/images/logos/mainLogo2.png" />
             </div>
             <Link href="/acerca-de-mi" className="hidden md:block cursor-pointer text-gray-600 hover:text-primary uppercase">About</Link>
             <Link href="/servicios" className="hidden md:block cursor-pointer text-gray-600 hover:text-primary uppercase">Services</Link>

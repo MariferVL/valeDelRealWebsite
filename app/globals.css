@@ -12,9 +12,10 @@
   --primary: #e3a617;
   --light: #fde4a9;
   --secondary: #d82633;
+  --darkRed: rgb(94, 14, 20);
   --accent: #d82933;
   --text: #ffffff;
-  --translucid: #e3a61714;
+  --translucid: #e3a6170e;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -46,7 +47,6 @@ body {
 }
 
 a {
-  color: inherit;
   text-decoration: none;
 }
 
@@ -78,7 +78,6 @@ a {
 }
 
 [data-hover]:hover::before {
-
   width: 6rem;
   justify-content: center;
   display: flex;

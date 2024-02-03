@@ -13,7 +13,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="es">
-      <body>
+      <body className='bg-translucid'>
         <Navigation />
         {children}
         <Footer />
