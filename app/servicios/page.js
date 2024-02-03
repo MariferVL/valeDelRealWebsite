@@ -1,57 +1,151 @@
-import UnderConstruction from "@/components/underConstruction";
+import ServiceCard from '@/components/servicecard';
 
-const features = [
-  { name: 'Origin', description: 'Designed by Good Goods, Inc.' },
-  { name: 'Material', description: 'Solid walnut base with rare earth magnets and powder coated steel card cover' },
-  { name: 'Dimensions', description: '6.25" x 3.55" x 1.15"' },
-  { name: 'Finish', description: 'Hand sanded and finished with natural oil' },
-  { name: 'Includes', description: 'Wood card tray and 3 refill packs' },
-  { name: 'Considerations', description: 'Made from natural materials. Grain and color vary with each item.' },
-]
+const valeriaServices = [
+  {
+    title: 'Formación Anual para Facilitadores en Sexualidad Sagrada, Sanación de Útero y Próstata, y Alquimia Interior. Online',
+    description: '¡Embárcate en un viaje transformador de 9 meses, desde abril a diciembre! Descubre la magia de la Sexualidad Sagrada en un entorno 100% vivencial, incluso en línea. ¿Listo para sanar y explorar tu ser integral?',
+    features: [
+      { name: 'Duración', description: '9 meses, desde abril a diciembre' },
+      { name: 'Modalidad', description: 'Online' },
+      { name: 'Enfoque', description: 'Vivencial y experiencial' },
+      { name: 'Beneficios', description: 'Comprender, recordar y habitar desde tu ser integral. Ideal para iniciantes y aquellos que buscan expandir sus conocimientos en Sexualidad Sagrada.' },
+      { name: 'Incluye', description: 'Material de estudio, acceso a sesiones en línea, certificado de finalización' },
+      { name: 'Requisitos', description: 'No se requieren conocimientos previos, solo una mente abierta y un deseo de crecimiento personal.' },
+    ],
+    images: [
+      "/images/workshops/formacion1.jpg",
+      "/images/workshops/formacion2.jpg",
+      "/images/workshops/formacion3.jpg",
+      "/images/workshops/formacion4.jpg",
+    ],
+  },
+  {
+    title: 'Diplomado de Sexualidad Sagrada y Alquimia Interior',
+    description: 'Conecta con tu energía sexual, abre las puertas al placer y al buen vivir. Un programa intensivo de 4 meses que volará mientras transformas tu relación con la sexualidad, amor propio y autoestima.',
+    features: [
+      { name: 'Duración', description: 'Pendiente' },
+      { name: 'Modalidad', description: 'Online' },
+      { name: 'Enfoque', description: 'Energía sexual, placer y buen vivir' },
+      { name: 'Beneficios', description: 'Transformación de la relación con la sexualidad, potenciación del amor propio y la autoestima.' },
+      { name: 'Incluye', description: 'Material didáctico, sesiones prácticas, acceso a recursos exclusivos' },
+      { name: 'Requisitos', description: 'Abierto a todos, sin restricciones de género o experiencia previa en el tema.' },
+    ],
+    images: [
+      "/images/workshops/w3.jpg",
+      "/images/workshops/w5.jpg",
+      "/images/workshops/w6.jpg",
+      "/images/workshops/w7.jpg",
+    ],
+  },
+  {
+    title: 'Talleres Vivenciales',
+    description: 'Sumérgete en espacios lúdicos y llenos de magia. Descubre la liberación de miedos y corazas mientras te permites vivir y disfrutarte plenamente. El contacto sutil y amoroso contigo y con los demás te espera.',
+    features: [
+      { name: 'Duración', description: 'Pendiente' },
+      { name: 'Modalidad', description: 'Presencial' },
+      { name: 'Enfoque', description: 'Liberación de miedos y corazas' },
+      { name: 'Beneficios', description: '--' },
+      { name: 'Incluye', description: 'Actividades prácticas, recursos para la autorreflexión, guía personalizada' },
+      { name: 'Requisitos', description: 'No se requieren habilidades específicas, solo el deseo de explorar y conectarse.' },
+    ],
+    images: [
+      "/images/workshops/taller2.jpg",
+      "/images/workshops/taller3.jpg",
+      "/images/workshops/taller4.jpg",
+      "/images/workshops/taller1.jpg",
+    ],
+  },
+  {
+    title: 'Retiros',
+    description: 'Ama retirarte y partir juntos a vivir la aventura de lo nuevo. Descubre lo desconocido y abre puertas a la renovación completa. Sal de tu zona de confort y deja que el alma y la mente se expandan.',
+    features: [
+      { name: 'Duración', description: 'Pendiente' },
+      { name: 'Modalidad', description: 'Presencial' },
+      { name: 'Enfoque', description: 'Renovación completa' },
+      { name: 'Beneficios', description: '--' },
+      { name: 'Incluye', description: 'Alojamiento, actividades programadas, materiales de retiro' },
+      { name: 'Requisitos', description: 'Disposición para la exploración personal y apertura a nuevas experiencias.' },
+    ],
+    images: [
+      "/images/workshops/extra1.jpg",
+      "/images/workshops/extra2.jpg",
+      "/images/workshops/w14.jpg",
+      "/images/workshops/w1.jpg",
+    ],
+  },
+  {
+    title: 'Constelación Familiar Individual',
+    description: '¿Qué te duele? ¿Qué necesitas mirar para dar un nuevo paso en tu vida? Explora a través de constelaciones familiares individuales online. Reconoce y sana heridas biográficas, parentales y transgeneracionales.',
+    features: [
+      { name: 'Duración', description: 'Pendiente' },
+      { name: 'Modalidad', description: 'Online' },
+      { name: 'Enfoque', description: 'Reconocer y sanar heridas para evolucionar junto a tu Alfa Familiar.' },
+      { name: 'Beneficios', description: '--' },
+      { name: 'Incluye', description: 'Sesión individual, seguimiento personalizado, material de apoyo' },
+      { name: 'Requisitos', description: 'Disponibilidad para la introspección y el compromiso con el proceso.' },
+    ],
+    images: [
+      "/images/workshops/w3.jpg",
+      "/images/workshops/w5.jpg",
+      "/images/workshops/w6.jpg",
+      "/images/workshops/w7.jpg",
+    ],
+  },
+  {
+    title: 'Constelaciones Temáticas Grupales',
+    description: 'Conéctate con heridas sistémicas a través de constelaciones temáticas grupales presenciales. Honra el espacio de dolor vivo en el Alma Familiar y encuentra nuevas fuerzas para continuar tu camino.',
+    features: [
+      { name: 'Duración', description: 'Pendiente' },
+      { name: 'Modalidad', description: 'Presencial' },
+      { name: 'Enfoque', description: '--' },
+      { name: 'Beneficios', description: '--' },
+      { name: 'Incluye', description: 'Sesión grupal, ejercicios de conexión, recursos temáticos' },
+      { name: 'Requisitos', description: 'Participación activa y respeto hacia los demás miembros del grupo.' },
+    ],
+    images: [
+      "/images/workshops/constela1.jpg",
+      "/images/workshops/constela2.jpg",
+      "/images/workshops/constela3.jpg",
+      "/images/workshops/constela4.jpg",
+    ],
+  },
+  {
+    title: 'Acompañamiento en Sexualidad',
+    description: 'Recibe terapia holística y descubre la integralidad de la sexualidad. Desde la mente y el cuerpo hasta el ser espiritual, las emociones, la historia y lo transgeneracional. Libera heridas y bloqueos para tu total bienestar.',
+    features: [
+      { name: 'Duración', description: 'Pendiente' },
+      { name: 'Modalidad', description: 'Pendiente' },
+      { name: 'Enfoque', description: '--' },
+      { name: 'Bienestar', description: 'Libera heridas y bloqueos para tu total bienestar.' },
+      { name: 'Incluye', description: 'Sesiones personalizadas, enfoque integral, recursos para el crecimiento personal' },
+      { name: 'Requisitos', description: 'Compromiso con el proceso terapéutico y apertura a la transformación.' },
+    ],
+    images: [
+      "/images/workshops/ext4.jpg",
+      "/images/workshops/ext3.jpg",
+      "/images/workshops/ext1.jpg",
+      "/images/workshops/ext2.jpg",
+    ],
+  },
+];
 
 export default function ServicesPage() {
   return (
-    <div className="bg-white">
-      <div className="mx-auto grid max-w-2xl grid-cols-1 items-center gap-x-8 gap-y-16 px-4 py-24 sm:px-6 sm:py-32 lg:max-w-7xl lg:grid-cols-2 lg:px-8">
-        <div>
-          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Technical Specifications</h2>
-          <p className="mt-4 text-gray-500">
-            The walnut wood card tray is precision milled to perfectly fit a stack of Focus cards. The powder coated
-            steel divider separates active cards from new ones, or can be used to archive important task lists.
-          </p>
-
-          <dl className="mt-16 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 sm:gap-y-16 lg:gap-x-8">
-            {features.map((feature) => (
-              <div key={feature.name} className="border-t border-gray-200 pt-4">
-                <dt className="font-medium text-gray-900">{feature.name}</dt>
-                <dd className="mt-2 text-sm text-gray-500">{feature.description}</dd>
-              </div>
-            ))}
-          </dl>
-        </div>
-        <div className="grid grid-cols-2 grid-rows-2 gap-4 sm:gap-6 lg:gap-8">
-          <img
-            src="https://tailwindui.com/img/ecommerce-images/product-feature-03-detail-01.jpg"
-            alt="Walnut card tray with white powder coated steel divider and 3 punchout holes."
-            className="rounded-lg bg-gray-100"
-          />
-          <img
-            src="https://tailwindui.com/img/ecommerce-images/product-feature-03-detail-02.jpg"
-            alt="Top down view of walnut card tray with embedded magnets and card groove."
-            className="rounded-lg bg-gray-100"
-          />
-          <img
-            src="https://tailwindui.com/img/ecommerce-images/product-feature-03-detail-03.jpg"
-            alt="Side of walnut card tray with card groove and recessed card area."
-            className="rounded-lg bg-gray-100"
-          />
-          <img
-            src="https://tailwindui.com/img/ecommerce-images/product-feature-03-detail-04.jpg"
-            alt="Walnut card tray filled with cards and card angled in dedicated groove."
-            className="rounded-lg bg-gray-100"
-          />
-        </div>
+    <main className='mt-32 mx-16'>
+      <header className='px-8'>
+        <h1 className="text-4xl font-bold text-left mb-8 text-primary">
+          Descubre una Jornada de Autoconocimiento y Bienestar
+        </h1>
+        <p className="text-lg text-left text-gray-700 mb-8">
+          Transforma tu vida a través de servicios especializados en sexualidad sagrada y crecimiento personal.
+        </p>
+      </header>
+      <div>
+        {valeriaServices.map((service, index) => (
+          <ServiceCard key={index} {...service} />
+        ))}
       </div>
-    </div>
-  )
+    </main>
+
+  );
 }
