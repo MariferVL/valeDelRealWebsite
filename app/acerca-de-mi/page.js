@@ -1,6 +1,9 @@
 // about/page.js
 
 import Image from "next/image";
+import Link from "next/link";
+import { FaInstagram, FaYoutube, FaTiktok, FaFacebook, FaWhatsapp } from 'react-icons/fa';
+
 
 const AboutPage = () => {
     return (
@@ -14,7 +17,8 @@ const AboutPage = () => {
 
                     <div className="p-4 md:p-12 text-center lg:text-left">
                         <div className="block lg:hidden rounded-full shadow-xl mx-auto -mt-16 h-48 w-48 bg-cover bg-center"
-                            style={{ backgroundImage: "url('https://source.unsplash.com/MP0IUfwrn0A')" }}></div>
+                            style={{ backgroundImage: "url('/public/images/valeria/vale4.jpg')" }}>
+                            </div>
 
                         <h1 className="text-3xl font-bold pt-8 lg:pt-0">Valeria del Real</h1>
                         <div className="mx-auto lg:mx-0 w-4/5 pt-3 border-b-2 border-green-500 opacity-25"></div>
@@ -39,7 +43,7 @@ const AboutPage = () => {
                             Con toda certeza, si estás aquí, es porque tenemos muchas cosas en común.
                             Quiero darte una cálida bienvenida a este Espacio que he llamado Escuela de Sexualidad Sagrada Latinoamericana, honrando de esta manera, a esta Tierra hermosa y rica, que constantemente nos nutre, tanto el cuerpo como el Alma.
                             Susurrando los antiguos Misterios que brotan para ser habitados, por quienes hemos decidido Caminar en Belleza y Corazón.
-                        
+
                             Valeria del Real
                         </p>
 
@@ -51,6 +55,51 @@ const AboutPage = () => {
 
                         <div className="mt-6 pb-16 lg:pb-0 w-4/5 lg:w-full mx-auto flex flex-wrap items-center justify-between">
                             {/* Enlaces a redes sociales */}
+                            <Link
+                                href="https://www.instagram.com/valeriadelreald"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                title="Sígueme en Instagram"
+                                aria-label="Ir a Instagram de Valeria del Real"
+                            >
+                                <FaInstagram className="text-xl text-primary transition duration-300" />
+                            </Link>
+                            <Link
+                                href="https://www.youtube.com/channel/UCL3girZaKpqnHMoaGp0AwhQ"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                title="Sígueme en Youtube"
+                                aria-label="Ir a Youtube de Valeria del Real"
+                            >
+                                <FaYoutube className="text-xl text-primary hover:scale-125 active:text-yellow-200 transition duration-300" />
+                            </Link>
+                            <Link
+                                href="https://www.tiktok.com/@valeriadelreald"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                title="Sígueme en TikTok"
+                                aria-label="Ir a TikTok de Valeria del Real"
+                            >
+                                <FaTiktok className="text-xl text-primary transition duration-300" />
+                            </Link>
+                            <Link
+                                href="https://web.facebook.com/valeria.d.9?_rdc=1&_rdr"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                title="Sígueme en Facebook"
+                                aria-label="Ir a Facebook de Valeria del Real"
+                            >
+                                <FaFacebook className="text-xl text-primary transition duration-300" />
+                            </Link>
+                            <Link
+                                href="https://api.whatsapp.com/send?phone=56990897824&text=Hola,%20quiero%20recibir%20informaci%C3%B3n%20de%20la%20Escuela%20de%20Sexualidad%20Sagrada%20Latinoamericana,%20gracias"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                title="Escríbeme en Whatsapp"
+                                aria-label="Escribir a Valeria del Real en Whatsapp"
+                            >
+                                <FaWhatsapp className="text-xl text-primary transition duration-300" />
+                            </Link>
                         </div>
                     </div>
 
@@ -58,7 +107,7 @@ const AboutPage = () => {
 
                 <div className="w-full lg:w-2/5">
                     <Image
-                        src="/images/valeria/vale4.jpg" 
+                        src="/images/valeria/vale4.jpg"
                         alt="Foto de Valeria del Real sentada en un sillon con forma de bulba femenina"
                         className="rounded-none lg:rounded-lg shadow-2xl hidden lg:block"
                         width={800}

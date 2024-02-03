@@ -2,20 +2,30 @@
 import './globals.css'
 import Footer from '@/components/footer'
 import Navigation from '@/components/navigation'
+import Loading from './dashboard/loading'
+import { Suspense } from 'react'
 
 
+const metadata = {
+  title: 'Valeria Del Real - Escuela d Sexualidad Sagrada Latinoamericana',
+  description: 'Descubre las formaciones, talleres, retiros y acompañamiento individual de Valeria Del Real. Explora la sexualidad sagrada y sanación integral.',
+  keywords: 'terapia, sexualidad sagrada, formaciones, diplomados, retiros, constelaciones familiares, talleres vivenciales, acompañamiento en sexualidad, bienestar integral, Valeria Del Real, canalización, estudio, renovación, terapeuta, Chile, extranjero',
+  author: 'María-Fernanda Villalobos López',
+  image: '/images/logos/roundLogo.png',
+  url: 'https://valeriadelreal.web.app/', 
+  siteName: 'Valeria Del Real - Terapeuta en Sexualidad Sagrada',
+  twitterHandle: '@tu-cuenta-twitter',
+};
 
-export const metadata = {
-  title: 'Valeria Del Real',
-  description: 'Iniciando pagina web',
-}
 
 export default function RootLayout({ children }) {
   return (
     <html lang="es">
       <body>
         <Navigation />
-        {children}
+        <Suspense fallback={<Loading />}>
+          {children}
+        </Suspense>
         <Footer />
       </body>
     </html>

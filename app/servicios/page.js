@@ -1,9 +1,16 @@
+import { Great_Vibes } from 'next/font/google'
 import ServiceCard from '@/components/servicecard';
+
+const great_vibes = Great_Vibes({
+  subsets: ['latin'],
+  weight: '400',
+  display: 'swap',
+})
 
 const valeriaServices = [
   {
     title: 'Formación Anual para Facilitadores en Sexualidad Sagrada, Sanación de Útero y Próstata, y Alquimia Interior. Online',
-    description: '¡Embárcate en un viaje transformador de 9 meses, desde abril a diciembre! Descubre la magia de la Sexualidad Sagrada en un entorno 100% vivencial, incluso en línea. ¿Listo para sanar y explorar tu ser integral?',
+    description: 'Embárcate en un viaje transformador de 9 meses, desde abril a diciembre. Descubre la magia de la Sexualidad Sagrada en un entorno 100% vivencial, incluso en línea. Listo para sanar y explorar tu ser integral?',
     features: [
       { name: 'Duración', description: '9 meses, desde abril a diciembre' },
       { name: 'Modalidad', description: 'Online' },
@@ -23,7 +30,7 @@ const valeriaServices = [
     title: 'Diplomado de Sexualidad Sagrada y Alquimia Interior',
     description: 'Conecta con tu energía sexual, abre las puertas al placer y al buen vivir. Un programa intensivo de 4 meses que volará mientras transformas tu relación con la sexualidad, amor propio y autoestima.',
     features: [
-      { name: 'Duración', description: 'Pendiente' },
+      { name: 'Duración', description: '4 meses' },
       { name: 'Modalidad', description: 'Online' },
       { name: 'Enfoque', description: 'Energía sexual, placer y buen vivir' },
       { name: 'Beneficios', description: 'Transformación de la relación con la sexualidad, potenciación del amor propio y la autoestima.' },
@@ -44,7 +51,7 @@ const valeriaServices = [
       { name: 'Duración', description: 'Pendiente' },
       { name: 'Modalidad', description: 'Presencial' },
       { name: 'Enfoque', description: 'Liberación de miedos y corazas' },
-      { name: 'Beneficios', description: '--' },
+      { name: 'Beneficios', description: 'Experimenta la liberación de miedos y corazas, permitiéndote vivir plenamente.' },
       { name: 'Incluye', description: 'Actividades prácticas, recursos para la autorreflexión, guía personalizada' },
       { name: 'Requisitos', description: 'No se requieren habilidades específicas, solo el deseo de explorar y conectarse.' },
     ],
@@ -52,7 +59,7 @@ const valeriaServices = [
       "/images/workshops/taller2.jpg",
       "/images/workshops/taller3.jpg",
       "/images/workshops/taller4.jpg",
-      "/images/workshops/taller1.jpg",
+      "/images/workshops/taller1.png",
     ],
   },
   {
@@ -62,7 +69,7 @@ const valeriaServices = [
       { name: 'Duración', description: 'Pendiente' },
       { name: 'Modalidad', description: 'Presencial' },
       { name: 'Enfoque', description: 'Renovación completa' },
-      { name: 'Beneficios', description: '--' },
+      { name: 'Beneficios', description: 'Experimenta la aventura de lo nuevo, sal de tu zona de confort y permite la expansión del alma y la mente.' },
       { name: 'Incluye', description: 'Alojamiento, actividades programadas, materiales de retiro' },
       { name: 'Requisitos', description: 'Disposición para la exploración personal y apertura a nuevas experiencias.' },
     ],
@@ -80,15 +87,15 @@ const valeriaServices = [
       { name: 'Duración', description: 'Pendiente' },
       { name: 'Modalidad', description: 'Online' },
       { name: 'Enfoque', description: 'Reconocer y sanar heridas para evolucionar junto a tu Alfa Familiar.' },
-      { name: 'Beneficios', description: '--' },
+      { name: 'Beneficios', description: 'Exploración y sanación de heridas biográficas, parentales y transgeneracionales.' },
       { name: 'Incluye', description: 'Sesión individual, seguimiento personalizado, material de apoyo' },
       { name: 'Requisitos', description: 'Disponibilidad para la introspección y el compromiso con el proceso.' },
     ],
     images: [
-      "/images/workshops/w3.jpg",
-      "/images/workshops/w5.jpg",
-      "/images/workshops/w6.jpg",
-      "/images/workshops/w7.jpg",
+      "/images/workshops/individual1.png",
+      "/images/workshops/individual2.png",
+      "/images/workshops/individual3.png",
+      "/images/workshops/individual4.png",
     ],
   },
   {
@@ -97,8 +104,8 @@ const valeriaServices = [
     features: [
       { name: 'Duración', description: 'Pendiente' },
       { name: 'Modalidad', description: 'Presencial' },
-      { name: 'Enfoque', description: '--' },
-      { name: 'Beneficios', description: '--' },
+      { name: 'Enfoque', description: 'Conexión con heridas sistémicas' },
+      { name: 'Beneficios', description: 'Honra el dolor vivo en el Alma Familiar, encuentra nuevas fuerzas para continuar tu camino.' },
       { name: 'Incluye', description: 'Sesión grupal, ejercicios de conexión, recursos temáticos' },
       { name: 'Requisitos', description: 'Participación activa y respeto hacia los demás miembros del grupo.' },
     ],
@@ -115,8 +122,8 @@ const valeriaServices = [
     features: [
       { name: 'Duración', description: 'Pendiente' },
       { name: 'Modalidad', description: 'Pendiente' },
-      { name: 'Enfoque', description: '--' },
-      { name: 'Bienestar', description: 'Libera heridas y bloqueos para tu total bienestar.' },
+      { name: 'Enfoque', description: 'Terapia holística para la integralidad de la sexualidad' },
+      { name: 'Beneficios', description: 'Libera heridas y bloqueos para tu total bienestar.' },
       { name: 'Incluye', description: 'Sesiones personalizadas, enfoque integral, recursos para el crecimiento personal' },
       { name: 'Requisitos', description: 'Compromiso con el proceso terapéutico y apertura a la transformación.' },
     ],
@@ -129,11 +136,12 @@ const valeriaServices = [
   },
 ];
 
+
 export default function ServicesPage() {
   return (
     <main className='mt-32 mx-16'>
       <header className='px-8'>
-        <h1 className="text-4xl font-bold text-left mb-8 text-primary">
+        <h1 className={`text-5xl font-bold text-left mb-8 text-primary ${great_vibes.className}`}>
           Descubre una Jornada de Autoconocimiento y Bienestar
         </h1>
         <p className="text-lg text-left text-gray-700 mb-8">

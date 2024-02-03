@@ -8,10 +8,10 @@ export default function Sidebar(isSidebarOpen) {
     const [isOpen, setIsOpen] = useState(isSidebarOpen);
 
     return (
-        <div class="flex h-screen antialiased text-gray-900 bg-black-100 dark:bg-dark dark:text-light">
+        <div class="flex h-screen antialiased text-gray-900 dark:bg-dark dark:text-light">
 
             <div
-                className={`fixed inset-y-0 z-20 flex w-80 ${isOpen ? 'transform translate-x-0' : 'transform -translate-x-full'}`}
+                className={`fixed inset-y-0 z-20 flex w-80 ${isOpen ? 'group-hover:transform translate-x-0' : 'group-hover:transform -translate-x-full'}`}
             >
                 <svg
                     className="absolute inset-0 w-full h-full text-white"
@@ -118,7 +118,7 @@ export default function Sidebar(isSidebarOpen) {
                                 />
                             </li> */}
                             <li>
-                                <div className="flex mt-8 gap-2 text-primary hover:text-white">
+                                <div className="flex mt-8 gap-2 text-primary">
                                     <Link
                                         href="https://www.instagram.com/valeriadelreald"
                                         target="_blank"
@@ -126,7 +126,7 @@ export default function Sidebar(isSidebarOpen) {
                                         title="Sígueme en Instagram"
                                         aria-label="Ir a Instagram de Valeria del Real"
                                     >
-                                        <FaInstagram className="text-xl text-primary hover:text-white transition duration-300" />
+                                        <FaInstagram className="text-xl text-primary transition duration-300" />
                                     </Link>
                                     <Link
                                         href="https://www.youtube.com/channel/UCL3girZaKpqnHMoaGp0AwhQ"
@@ -135,7 +135,7 @@ export default function Sidebar(isSidebarOpen) {
                                         title="Sígueme en Youtube"
                                         aria-label="Ir a Youtube de Valeria del Real"
                                     >
-                                        <FaYoutube className="text-xl text-primary hover:text-white hover:scale-125 active:text-yellow-200 transition duration-300" />
+                                        <FaYoutube className="text-xl text-primary hover:scale-125 active:text-yellow-200 transition duration-300" />
                                     </Link>
                                     <Link
                                         href="https://www.tiktok.com/@valeriadelreald"
@@ -144,7 +144,7 @@ export default function Sidebar(isSidebarOpen) {
                                         title="Sígueme en TikTok"
                                         aria-label="Ir a TikTok de Valeria del Real"
                                     >
-                                        <FaTiktok className="text-xl text-primary hover:text-white transition duration-300" />
+                                        <FaTiktok className="text-xl text-primary transition duration-300" />
                                     </Link>
                                     <Link
                                         href="https://web.facebook.com/valeria.d.9?_rdc=1&_rdr"
@@ -153,7 +153,7 @@ export default function Sidebar(isSidebarOpen) {
                                         title="Sígueme en Facebook"
                                         aria-label="Ir a Facebook de Valeria del Real"
                                     >
-                                        <FaFacebook className="text-xl text-primary hover:text-white transition duration-300" />
+                                        <FaFacebook className="text-xl text-primary transition duration-300" />
                                     </Link>
                                     <Link
                                         href="https://api.whatsapp.com/send?phone=56990897824&text=Hola,%20quiero%20recibir%20informaci%C3%B3n%20de%20la%20Escuela%20de%20Sexualidad%20Sagrada%20Latinoamericana,%20gracias"
@@ -162,7 +162,7 @@ export default function Sidebar(isSidebarOpen) {
                                         title="Escríbeme en Whatsapp"
                                         aria-label="Escribir a Valeria del Real en Whatsapp"
                                     >
-                                        <FaWhatsapp className="text-xl text-primary hover:text-white transition duration-300" />
+                                        <FaWhatsapp className="text-xl text-primary transition duration-300" />
                                     </Link>
                                 </div>
                             </li>
