@@ -5,7 +5,7 @@ import Image from "next/image";
 const AboutPage = () => {
     return (
         <div className="font-sans antialiased text-gray-900 leading-normal tracking-wider bg-cover"
-            style={{ backgroundImage: "url('https://source.unsplash.com/1L71sPT5XKc')" }}>
+            style={{ backgroundImage: "url('/images/naturaleza2.png')" }}>
 
             <div className="max-w-4xl flex items-center h-auto lg:h-screen flex-wrap mx-auto my-32 lg:my-0">
 
@@ -58,8 +58,8 @@ const AboutPage = () => {
 
                 <div className="w-full lg:w-2/5">
                     <Image
-                        src="https://source.unsplash.com/MP0IUfwrn0A"
-                        alt="Fondo con imagen de una pequeña cascada y bosque"
+                        src="/images/valeria/vale4.jpg" 
+                        alt="Foto de Valeria del Real sentada en un sillon con forma de bulba femenina"
                         className="rounded-none lg:rounded-lg shadow-2xl hidden lg:block"
                         width={800}
                         height={600}

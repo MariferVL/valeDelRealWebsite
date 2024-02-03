@@ -52,7 +52,7 @@ export default function Navigation() {
 
   return (
     <nav
-      className={`p-2 fixed top-0 w-full z-10`}
+      className={`md:p-2 fixed top-0 w-full md:z-10 sm:z-0`}
       style={{ backgroundColor: `rgba(227, 166, 23, ${opacity})`, backdropFilter: `blur(${blur}px)` }}
     >
       <div className="flex justify-between items-center mx-16">

@@ -15,8 +15,8 @@ const valeriaServices = [
     images: [
       "/images/workshops/formacion1.jpg",
       "/images/workshops/formacion2.jpg",
-      "/images/workshops/formacion3.jpg",
-      "/images/workshops/formacion4.jpg",
+      "/images/workshops/formacion3.png",
+      "/images/workshops/formacion4.png",
     ],
   },
   {
@@ -121,10 +121,10 @@ const valeriaServices = [
       { name: 'Requisitos', description: 'Compromiso con el proceso terapéutico y apertura a la transformación.' },
     ],
     images: [
-      "/images/workshops/ext4.jpg",
-      "/images/workshops/ext3.jpg",
-      "/images/workshops/ext1.jpg",
-      "/images/workshops/ext2.jpg",
+      "/images/workshops/ext1.png",
+      "/images/workshops/ext2.png",
+      "/images/workshops/ext3.png",
+      "/images/workshops/ext4.png",
     ],
   },
 ];
