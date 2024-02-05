@@ -1,5 +1,7 @@
+import UnderConstruction from "@/components/underConstruction";
+
 export default function TestimonyPage() {
     return <main>
-        <h1>Testimonios:</h1>
+        <UnderConstruction />
     </main>
 }
