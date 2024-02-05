@@ -12,10 +12,10 @@
   --primary: #e3a617;
   --light: #fde4a9;
   --secondary: #d82633;
-  --darkRed: rgb(94, 14, 20);
+  --darkRed: #8b171f;
   --accent: #d82933;
   --text: #ffffff;
-  --translucid: #e3a6170e;
+  --translucid: #e3a61724;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -111,4 +111,23 @@ a {
   background-image: url('/images/sun1.png'); 
   width: 100%;
   height: 100%;
+}
+
+/* Actualiza estas reglas en tu hoja de estilo CSS */
+
+.hover-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px; /* Grosor del subrayado */
+  background-color: #ffcc00; /* Color del subrayado */
+  transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+  transform: translateX(-50%);
+}
+
+.hover-link:hover::after {
+  width: 100%;
+  left: 0;
 }

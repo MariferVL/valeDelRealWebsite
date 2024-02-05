@@ -1,9 +1,9 @@
 import UnderConstruction from "@/components/underConstruction";
+import Footer from '@/components/footer';
 
 export default function ContactPage() {
     return <main>
         <UnderConstruction />
-
-        {/* <h1>Me encuentras en:</h1> */}
+        <Footer />
     </main>
 }

@@ -1,5 +1,3 @@
-// about/page.js
-
 import Image from "next/image";
 import Link from "next/link";
 import { FaInstagram, FaYoutube, FaTiktok, FaFacebook, FaWhatsapp } from 'react-icons/fa';

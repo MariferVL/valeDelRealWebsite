@@ -20,11 +20,14 @@ export default function Footer() {
             <div>
               <Logo showButton={false} logoSrc="/images/logos/mainLogo2.png" />
             </div>
-            <Link href="/acerca-de-mi" className="hidden md:block cursor-pointer text-gray-600 hover:text-primary uppercase">About</Link>
-            <Link href="/servicios" className="hidden md:block cursor-pointer text-gray-600 hover:text-primary uppercase">Services</Link>
-            <Link href="/testimonios" className="hidden md:block cursor-pointer text-gray-600 hover:text-primary uppercase">Why us</Link>
-            <Link href="/contacto" className="hidden md:block cursor-pointer text-gray-600 hover:text-primary uppercase">Contact</Link>
+            <Link href="/acerca-de-mi" className="hidden md:block cursor-pointer text-gray-600 hover:text-primary uppercase">Descubre mi Esencia</Link>
+            <Link href="/servicios" className="hidden md:block cursor-pointer text-gray-600 hover:text-primary uppercase">Explora mis Servicios</Link>
+            <Link href="/testimonios" className="hidden md:block cursor-pointer text-gray-600 hover:text-primary uppercase">Testimonios Transformadores</Link>
+            <Link href="/contacto" className="hidden md:block cursor-pointer text-gray-600 hover:text-primary uppercase">Contáctanos</Link>
             <div className="flex flex-row space-x-2 lg:space-x-4 items-center justify-between">
+              <Link href="https://api.whatsapp.com/send?phone=56990897824&text=Hola,%20quiero%20recibir%20informaci%C3%B3n%20de%20la%20Escuela%20de%20Sexualidad%20Sagrada%20Latinoamericana,%20gracias" target="_blank" rel="noopener noreferrer">
+                <FaWhatsapp className="text-xl text-icon hover:text-yellow-400 transition duration-300" />
+              </Link>
               <Link href="https://www.instagram.com/valeriadelreald" target="_blank" rel="noopener noreferrer">
                 <FaInstagram className="text-xl text-icon hover:text-yellow-400 transition duration-300" />
               </Link>
@@ -36,9 +39,6 @@ export default function Footer() {
               </Link>
               <Link href="https://web.facebook.com/valeria.d.9?_rdc=1&_rdr" target="_blank" rel="noopener noreferrer">
                 <FaFacebook className="text-xl text-icon hover:text-yellow-400 transition duration-300" />
-              </Link>
-              <Link href="https://api.whatsapp.com/send?phone=56990897824&text=Hola,%20quiero%20recibir%20informaci%C3%B3n%20de%20la%20Escuela%20de%20Sexualidad%20Sagrada%20Latinoamericana,%20gracias" target="_blank" rel="noopener noreferrer">
-                <FaWhatsapp className="text-xl text-icon hover:text-yellow-400 transition duration-300" />
               </Link>
             </div>
 

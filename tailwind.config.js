@@ -12,11 +12,11 @@ module.exports = {
         end: '#e0a417',
         primary: '#e3a617',
         secondary: '#d82633',
-        darkRed:'rgb(94, 14, 20)',
+        darkRed:'#76151b',
         icon: '#b81319',
         accent: '#d82933',
         text: '#ffffff',
-        translucid: '#e3a6170e',
+        translucid: '#e3a61724',
         light: '#fde4a9'
 
       },
