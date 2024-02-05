@@ -1,6 +1,5 @@
 "use client";
 import { useEffect, useState } from 'react';
-import Image from 'next/image';
 
 export default function UnderConstruction() {
   const [windowWidth, setWindowWidth] = useState(0)
@@ -28,7 +27,7 @@ export default function UnderConstruction() {
       <video preload="none" autoPlay muted loop>
         <source
           src={getVideoSrc()}
-          alt="Under Construction"
+          alt="Video sobre página en construcción."
           type="video/mp4"
         />
         Tu navegador no admite la etiqueta de video.

@@ -1,3 +1,5 @@
+"use client";
+import { useEffect, useState } from 'react';
 import Link from "next/link";
 import { FaInstagram, FaYoutube, FaTiktok, FaFacebook, FaWhatsapp } from 'react-icons/fa';
 import { Great_Vibes, Montserrat } from 'next/font/google'
@@ -14,11 +16,33 @@ const montserrat = Montserrat({
 })
 
 export default function Home() {
+  const [windowWidth, setWindowWidth] = useState(0)
+
+  useEffect(() => {
+    setWindowWidth(window.innerWidth);
+
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
+  const getVideoSrc = () => {
+    return windowWidth > 700 ? '/videos/mainVideoSm.mp4' : '/videos/mainVideoLg.mp4';
+  };
   return (
     <>
       <main className="relative">
         <video preload="none" autoPlay muted loop className="w-full">
-          <source src="/images/valeria/mainVideo.mp4" type="video/mp4" />
+          <source 
+          src={getVideoSrc()}
+          alt="Video de Valeria saludando un condor en el cielo."
+          type="video/mp4" />
           Tu navegador no admite la etiqueta de video.
         </video>
         <div className="absolute inset-0 flex items-center justify-end md:mr-40">
