@@ -1,11 +1,23 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { FaInstagram, FaYoutube, FaTiktok, FaFacebook, FaWhatsapp } from 'react-icons/fa';
 import HoverLink from '../hoverlink';
 import Logo from './Logo';
 
-export default function Sidebar(isSidebarOpen) {
-    const [isOpen, setIsOpen] = useState(isSidebarOpen);
+export default function Sidebar({ closeSidebar }) {
+    console.log('closeSidebar: ', closeSidebar);
+    const [isOpen, setIsOpen] = useState(false);
+
+    useEffect(() => {
+        setIsOpen(true);
+        console.log('isOpen: ', isOpen);
+
+    }, []);
+
+    const handleCloseSidebar = () => {
+        setIsOpen(false);
+        closeSidebar();
+    };
 
     return (
         <div class="flex h-screen antialiased text-gray-900 dark:bg-dark dark:text-light">
@@ -27,7 +39,7 @@ export default function Sidebar(isSidebarOpen) {
                     <div className="flex items-center justify-between flex-shrink-0 w-64 p-4">
                         <Logo showButton={false} logoSrc="/images/logos/mainLogo2.png" />
                         <button
-                            onClick={() => setIsOpen(false)}
+                            onClick={handleCloseSidebar}
                             className="p-1 rounded-lg focus:outline-none focus:ring"
                         >
                             <svg

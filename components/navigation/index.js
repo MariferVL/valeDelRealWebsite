@@ -17,7 +17,13 @@ export default function Navigation() {
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
   };
+  
+  const closeSidebar = () => {
+    setIsSidebarOpen(false);
+    return isSidebarOpen;
+  };
 
+  
   useEffect(() => {
     const handleScroll = () => {
       let currentScrollY = window.scrollY;
@@ -61,7 +67,7 @@ export default function Navigation() {
         {/* Hamburger icon for mobile */}
 
         <button
-          className="cursor-pointer md:hidden fixed p-2 text-white bg-initial rounded-lg top-5 left-5"
+          className="cursor-pointer md:hidden fixed p-2 text-white border border-white rounded-lg top-5 left-5"
           onClick={toggleSidebar}
         >
           <svg
@@ -193,9 +199,8 @@ export default function Navigation() {
       </div>
 
       {/* Sidebar for Mobile */}
-      {isSidebarOpen &&
-        <Sidebar isSidebarOpen="isSidebarOpen" />
-      }
+      {isSidebarOpen && <Sidebar closeSidebar={closeSidebar} />}
+
     </nav>
   );
 };
