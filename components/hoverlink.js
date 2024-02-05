@@ -8,10 +8,10 @@ export default function HoverLink({ href, text, title, hoverText, activeText, ar
             data-hover={hoverText}
             data-active={activeText}
             aria-label={ariaLabel}
-            className={`inline-block relative mx-2 py-2 text-center text-sm font-semibold flex items-center justify-center`}
+            className="relative inline-block py-2 text-center text-sm font-semibold overflow-hidden group w-32"
         >
-            <span >{text}</span>
-
+            <span className="base-text">{text}</span>
+            <span className="hover-text">{hoverText}</span>
         </Link>
     );
 }
