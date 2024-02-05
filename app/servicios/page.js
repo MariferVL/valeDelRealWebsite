@@ -1,5 +1,6 @@
 import { Great_Vibes } from 'next/font/google'
 import ServiceCard from '@/components/servicecard';
+import Link from 'next/link';
 
 const great_vibes = Great_Vibes({
   subsets: ['latin'],
@@ -38,10 +39,10 @@ const valeriaServices = [
       { name: 'Requisitos', description: 'Abierto a todos, sin restricciones de género o experiencia previa en el tema.' },
     ],
     images: [
-      "/images/workshops/w3.jpg",
-      "/images/workshops/w5.jpg",
-      "/images/workshops/w6.jpg",
-      "/images/workshops/w7.jpg",
+      "/images/workshops/diplomado1.png",
+      "/images/workshops/diplomado2.png",
+      "/images/workshops/diplomado3.png",
+      "/images/workshops/diplomado4.png",
     ],
   },
   {
@@ -139,15 +140,48 @@ const valeriaServices = [
 
 export default function ServicesPage() {
   return (
-    <main className='mt-32 mx-16'>
-      <header className='px-8'>
-        <h1 className={`text-5xl font-bold text-left mb-8 text-primary ${great_vibes.className}`}>
-          Descubre una Jornada de Autoconocimiento y Bienestar
-        </h1>
-        <p className="text-lg text-left text-gray-700 mb-8">
-          Transforma tu vida a través de servicios especializados en sexualidad sagrada y crecimiento personal.
-        </p>
-      </header>
+
+    <main className='mt-16'>
+      <section
+        id='hero-section'
+        className="relative bg-[url('/images/workshops/w13.jpg')] bg-cover bg-center bg-no-repeat"
+      >
+        <div
+          className="absolute inset-0 bg-white/75 sm:bg-transparent sm:from-white/95 sm:to-white/25 ltr:sm:bg-gradient-to-r rtl:sm:bg-gradient-to-l"
+        ></div>
+
+        <div
+          className="relative mx-auto max-w-screen-xl px-4 py-32 sm:px-6 lg:flex lg:h-screen lg:items-center lg:px-8"
+        >
+          <div className="max-w-xl text-center ltr:sm:text-left rtl:sm:text-right">
+            <h1 className={`text-3xl font-extrabold sm:text-5xl font-bold text-left mb-8 text-primary ${great_vibes.className}`}>
+              Descubre una Jornada de
+
+              <strong className="block font-extrabold text-rose-700"> Autoconocimiento y Bienestar. </strong>
+            </h1>
+
+            <p className="mt-4 max-w-lg sm:text-xl/relaxed">
+              Transforma tu vida a través de servicios especializados en sexualidad sagrada y crecimiento personal.
+            </p>
+
+            <div className="mt-8 flex flex-wrap gap-4 text-center">
+              <Link
+                href="/contacto"
+                className="block w-full rounded bg-rose-600 px-12 py-3 text-sm font-medium text-white shadow hover:bg-rose-700 focus:outline-none focus:ring active:bg-rose-500 sm:w-auto"
+              >
+                Comienza tu viaje
+              </Link>
+
+              <Link
+                href="#"
+                className="block w-full rounded bg-white px-12 py-3 text-sm font-medium text-rose-600 shadow hover:text-rose-700 focus:outline-none focus:ring active:text-rose-500 sm:w-auto"
+              >
+                Learn More
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
       <div>
         {valeriaServices.map((service, index) => (
           <ServiceCard key={index} {...service} />
