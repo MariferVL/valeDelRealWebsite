@@ -1,6 +1,7 @@
 import ServiceCard from '@/components/servicecard';
 import Link from 'next/link';
 import { Great_Vibes, Montserrat } from 'next/font/google'
+import Footer from '@/components/footer';
 
 const great_vibes = Great_Vibes({
   subsets: ['latin'],
@@ -54,7 +55,7 @@ const valeriaServices = [
     title: 'Talleres Vivenciales',
     description: 'Sumérgete en espacios lúdicos y llenos de magia. Descubre la liberación de miedos y corazas mientras te permites vivir y disfrutarte plenamente. El contacto sutil y amoroso contigo y con los demás te espera.',
     features: [
-      { name: 'Duración', description: 'Pendiente' },
+      { name: 'Duración', description: '3-4 horas aprox.' },
       { name: 'Modalidad', description: 'Presencial' },
       { name: 'Enfoque', description: 'Liberación de miedos y corazas' },
       { name: 'Beneficios', description: 'Experimenta la liberación de miedos y corazas, permitiéndote vivir plenamente.' },
@@ -72,7 +73,7 @@ const valeriaServices = [
     title: 'Retiros',
     description: 'Ama retirarte y partir juntos a vivir la aventura de lo nuevo. Descubre lo desconocido y abre puertas a la renovación completa. Sal de tu zona de confort y deja que el alma y la mente se expandan.',
     features: [
-      { name: 'Duración', description: 'Pendiente' },
+      { name: 'Duración', description: 'Consultanos por un retiro en específico.' },
       { name: 'Modalidad', description: 'Presencial' },
       { name: 'Enfoque', description: 'Renovación completa' },
       { name: 'Beneficios', description: 'Experimenta la aventura de lo nuevo, sal de tu zona de confort y permite la expansión del alma y la mente.' },
@@ -90,7 +91,7 @@ const valeriaServices = [
     title: 'Constelación Familiar Individual',
     description: '¿Qué te duele? ¿Qué necesitas mirar para dar un nuevo paso en tu vida? Explora a través de constelaciones familiares individuales online. Reconoce y sana heridas biográficas, parentales y transgeneracionales.',
     features: [
-      { name: 'Duración', description: 'Pendiente' },
+      { name: 'Duración', description: '1-2 horas aprox.' },
       { name: 'Modalidad', description: 'Online' },
       { name: 'Enfoque', description: 'Reconocer y sanar heridas para evolucionar junto a tu Alfa Familiar.' },
       { name: 'Beneficios', description: 'Exploración y sanación de heridas biográficas, parentales y transgeneracionales.' },
@@ -108,7 +109,7 @@ const valeriaServices = [
     title: 'Constelaciones Temáticas Grupales',
     description: 'Conéctate con heridas sistémicas a través de constelaciones temáticas grupales presenciales. Honra el espacio de dolor vivo en el Alma Familiar y encuentra nuevas fuerzas para continuar tu camino.',
     features: [
-      { name: 'Duración', description: 'Pendiente' },
+      { name: 'Duración', description: '3-4 horas aprox.' },
       { name: 'Modalidad', description: 'Presencial' },
       { name: 'Enfoque', description: 'Conexión con heridas sistémicas' },
       { name: 'Beneficios', description: 'Honra el dolor vivo en el Alma Familiar, encuentra nuevas fuerzas para continuar tu camino.' },
@@ -126,8 +127,8 @@ const valeriaServices = [
     title: 'Acompañamiento en Sexualidad',
     description: 'Recibe terapia holística y descubre la integralidad de la sexualidad. Desde la mente y el cuerpo hasta el ser espiritual, las emociones, la historia y lo transgeneracional. Libera heridas y bloqueos para tu total bienestar.',
     features: [
-      { name: 'Duración', description: 'Pendiente' },
-      { name: 'Modalidad', description: 'Pendiente' },
+      { name: 'Duración', description: '1 hora' },
+      { name: 'Modalidad', description: 'Online' },
       { name: 'Enfoque', description: 'Terapia holística para la integralidad de la sexualidad' },
       { name: 'Beneficios', description: 'Libera heridas y bloqueos para tu total bienestar.' },
       { name: 'Incluye', description: 'Sesiones personalizadas, enfoque integral, recursos para el crecimiento personal' },
@@ -146,37 +147,47 @@ const valeriaServices = [
 export default function ServicesPage() {
   return (
 
-    <main className='mt-16'>
-      <section
-        id='hero-section'
-        className="relative z-1 bg-[url('/images/workshops/w13.jpg')] bg-cover bg-center bg-no-repeat"
-      >
-        <div
-          className="absolute inset-0 bg-white/75 sm:bg-transparent sm:from-white/95 sm:to-white/25 ltr:sm:bg-gradient-to-r rtl:sm:bg-gradient-to-l"
-        ></div>
-
-        <div
-          className="relative mx-auto max-w-screen-xl px-4 py-32 sm:px-6 lg:flex lg:h-screen lg:items-center lg:px-8"
+    <>
+      <main>
+        <section
+          id='hero-section'
+          className="relative mb-16 z-1 bg-[url('/images/mainService.png')] bg-contain lg:bg-cover bg-center bg-no-repeat"
         >
-          <div className="max-w-xl text-center ltr:sm:text-left rtl:sm:text-right">
-            <h1 className={`text-3xl font-extrabold sm:text-5xl font-bold text-left mb-8 text-primary ${montserrat.className}`}>
-              Descubre una Jornada de
+          <div
+            className="absolute inset-0 bg-white bg-opacity-40 lg:bg-opacity-10"
+          ></div>
 
-              <strong className="block font-extrabold text-rose-700"> Autoconocimiento y Bienestar. </strong>
-            </h1>
+          <div
+            className="relative mx-auto max-w-screen-xl pl-4 sm:px-6 lg:flex lg:h-screen lg:justify-end lg:items-center lg:pl-8"
+          >
+            <div className="max-w-lg lg:p-5 lg:mt-48  rtl:sm:text-right lg:bg-light lg:bg-opacity-30">
+              <h1 className={`text-5xl font-extrabold font-bold text-left mb-3 text-white  ${great_vibes.className}`}>
+                Descubre una Jornada de
+                <strong className={`block text-4xl font-extrabold text-rose-700 ${montserrat.className}`}> Autoconocimiento y Bienestar. </strong>
+              </h1>
 
-            <p className="mt-4 max-w-lg sm:text-xl/relaxed">
-              Transforma tu vida a través de servicios especializados en sexualidad sagrada y crecimiento personal.
-            </p>
+              <p className={`max-w-lg sm:text-3xl/relaxed  ${great_vibes.className}`}>
+                Transforma tu vida a través de servicios especializados en sexualidad sagrada y crecimiento personal.
+              </p>
+            </div>
+
           </div>
+        </section>
+        <div className='mx-8'>
+          <div className="relative my-6 mx-auto w-64 h-16">
+            <div className="absolute inset-0 bg-center bg-no-repeat bg-cover" style={{ backgroundImage: "url('/images/separador.png')" }}></div>
+          </div>
+          {valeriaServices.map((service, index) => (
+            <>
+              <ServiceCard key={index} {...service} />
+              <div className="relative my-6 mx-auto w-64 h-16">
+                <div className="absolute inset-0 bg-center bg-no-repeat bg-cover" style={{ backgroundImage: "url('/images/separador.png')" }}></div>
+              </div>
+            </>
+          ))}
         </div>
-      </section>
-      <div>
-        {valeriaServices.map((service, index) => (
-          <ServiceCard key={index} {...service} />
-        ))}
-      </div>
-    </main>
-
+      </main>
+      <Footer />
+    </>
   );
 }
