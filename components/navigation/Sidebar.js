@@ -35,7 +35,11 @@ export default function Sidebar({ closeSidebar }) {
                 </svg>
                 <div className="z-10 flex flex-col flex-1">
                     <div className="flex items-center justify-between flex-shrink-0 w-64 p-4">
-                        <Logo showButton={false} logoSrc="/images/logos/mainLogo2.png" />
+                        <Logo 
+                        showButton={false} 
+                        logoSrc="/images/logos/mainLogo2.png"
+                        closeSidebarOnClick={handleCloseSidebar}
+                        />
                         <button
                             onClick={handleCloseSidebar}
                             className="p-1 rounded-lg focus:outline-none focus:ring"

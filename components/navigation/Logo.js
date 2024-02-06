@@ -4,15 +4,24 @@ import Image from "next/image";
 import Link from "next/link";
 import Button from "./Button";
 
-const Logo = ({ showButton, logoSrc }) => {
+export default function Logo({ showButton, logoSrc, closeSidebarOnClick }) {
+  const handleClick = () => {
+    closeSidebarOnClick && closeSidebarOnClick();
+  };
+
   return (
     <>
-      <Link href="/" className={`block w-40 mx-auto ${showButton ? 'hidden' : 'block'}`}>
+      <Link
+        href="/"
+        className={`block w-40 mx-auto ${showButton ? 'hidden' : 'block'}`}
+        onClick={handleClick}
+      >
         <Image
           src={logoSrc}
           alt="Logo"
           width={974}
           height={429}
+          priority
         />
       </Link>
       <div
@@ -25,5 +34,3 @@ const Logo = ({ showButton, logoSrc }) => {
     </>
   );
 };
-
-export default Logo;
