@@ -51,7 +51,7 @@ export default function Navigation() {
       window.removeEventListener("scroll", handleScroll);
       window.removeEventListener("resize", handleResize);
     };
-  }, []);
+  }, [width]);
 
   const textColor = isScrolling ? 'text-yellow-600' : 'text-white';
 
@@ -126,7 +126,7 @@ export default function Navigation() {
             </div>
             <div className="absolute right-0 z-10 mt-8 mr-8 w-full origin-top-right rounded-xl shadow-lg focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabIndex="-1">
 
-              <ul className=" absolute hidden group-hover:block bg-white bg-opacity-60 text-accent p-2 space-y-2" role="none">
+              <ul className=" absolute hidden group-hover:block bg-white bg-opacity-60 text-yellow-600 p-2 space-y-2" role="none">
                 {/* <li>
                   <HoverLink
                     href="/descargas"

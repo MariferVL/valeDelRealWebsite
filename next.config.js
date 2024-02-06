@@ -3,15 +3,38 @@ const nextConfig = {
   output: 'export',
   images: {
     unoptimized: true,
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'source.unsplash.com',
-        pathname: '**',
-      },
-    ],
   },
-}
- 
-module.exports = nextConfig
+  async headers() {
+    return [
+      {
+        source: '/images/:path*',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000', 
+          },
+        ],
+      },
+      {
+        source: '/_next/static/:path*', 
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000', 
+          },
+        ],
+      },
+      {
+        source: '/videos/:path*', 
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000', 
+          },
+        ],
+      },
+    ];
+  },
+};
 
+module.exports = nextConfig;
