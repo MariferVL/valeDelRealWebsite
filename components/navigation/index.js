@@ -11,7 +11,6 @@ export default function Navigation() {
   const [isScrolling, setIsScrolling] = useState(false);
   const [width, setWidth] = useState(0);
   const [showButton, setShowButton] = useState(false);
-  const [opacity, setOpacity] = useState(0.7);
   const [blur, setBlur] = useState(10);
 
   const toggleSidebar = () => {
@@ -29,11 +28,9 @@ export default function Navigation() {
       let currentScrollY = window.scrollY;
       if (currentScrollY > 30) {
         setIsScrolling(true);
-        setOpacity(0.3);
         setBlur(5);
       } else {
         setIsScrolling(false);
-        setOpacity(0.7);
         setBlur(10);
       }
     };
@@ -56,10 +53,12 @@ export default function Navigation() {
     };
   }, []);
 
+  const textColor = isScrolling ? 'text-yellow-600' : 'text-white';
+
   return (
     <nav
-      className={`md:p-2 fixed top-0 w-full md:z-10 sm:z-0`}
-      style={{ backgroundColor: `rgba(227, 166, 23, ${opacity})`, backdropFilter: `blur(${blur}px)` }}
+      className={`md:p-2 fixed top-0 w-full z-20`}
+      style={{ backgroundColor: `rgba(227, 166, 23, 0.3)`, backdropFilter: `blur(${blur}px)` }}
     >
       <div className="flex justify-between items-center mx-16">
         <Logo showButton={showButton} logoSrc={isScrolling ? "/images/logos/mainLogo2.png" : "/images/logos/mainLogo1.png"} />
@@ -83,7 +82,7 @@ export default function Navigation() {
         </button>
 
         {/* Navbar Links for Desktop */}
-        <ul className="hidden ml-72 md:flex space-x-2 text-white">
+        <ul className={`hidden ml-72 md:flex space-x-2 ${textColor}`}>
           <li >
             <HoverLink
               href="/acerca-de-mi"
@@ -118,16 +117,16 @@ export default function Navigation() {
           </li>
           <li className="group relative text-white flex items-center">
             <div>
-              <button type="button" className="inline-flex w-32 items-center justify-center gap-x-1.5 rounded-md px-3 py-2 text-sm font-semibold" id="menu-button" aria-expanded="true" aria-haspopup="true">
+              <button type="button" className={`inline-flex w-32 items-center justify-center gap-x-1.5 rounded-md px-3 py-2 text-sm font-semibold ${textColor}`} id="menu-button" aria-expanded="true" aria-haspopup="true">
                 Recursos
-                <svg className="-mr-1 h-5 w-5 text-initial" viewBox="0 0 20 20" fill="var(--secondary)" aria-hidden="true">
+                <svg className="-mr-1 h-5 w-5 text-initial" viewBox="0 0 20 20" fill="var(--primary)" aria-hidden="true">
                   <path fillRule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clipRule="evenodd" />
                 </svg>
               </button>
             </div>
-            <div className="absolute right-0 z-10 mt-12 mr-8 w-full origin-top-right rounded-xl shadow-lg focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabIndex="-1">
+            <div className="absolute right-0 z-10 mt-8 mr-8 w-full origin-top-right rounded-xl shadow-lg focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabIndex="-1">
 
-              <ul className=" absolute hidden group-hover:block bg-white text-accent p-2 space-y-2" role="none">
+              <ul className=" absolute hidden group-hover:block bg-white bg-opacity-60 text-accent p-2 space-y-2" role="none">
                 {/* <li>
                   <HoverLink
                     href="/descargas"

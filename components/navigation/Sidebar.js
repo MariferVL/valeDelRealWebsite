@@ -21,7 +21,7 @@ export default function Sidebar({ closeSidebar }) {
         <div className="flex h-screen antialiased text-gray-900 dark:bg-dark dark:text-light">
 
             <div
-                className={`fixed inset-y-0 z-20 flex w-80 ${isOpen ? 'group-hover:transform translate-x-0' : 'group-hover:transform -translate-x-full'}`}
+                className={`fixed inset-y-0 z-50 flex w-80 ${isOpen ? 'group-hover:transform translate-x-0' : 'group-hover:transform -translate-x-full'}`}
             >
                 <svg
                     className="absolute inset-0 w-full h-full text-white"

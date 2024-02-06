@@ -113,21 +113,21 @@ a {
   height: 100%;
 }
 
-/* Actualiza estas reglas en tu hoja de estilo CSS */
-
-.hover-link::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  width: 0;
-  height: 2px; /* Grosor del subrayado */
-  background-color: #ffcc00; /* Color del subrayado */
-  transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
-  transform: translateX(-50%);
-}
-
-.hover-link:hover::after {
-  width: 100%;
-  left: 0;
+@media (max-width: 800px) {
+  [data-hover]:hover::before,
+  [data-hover]:active::before {
+    opacity: 1;
+  }
+  
+  [data-hover]:hover .base-text,
+  [data-hover]:active .base-text {
+    opacity: 0;
+  }
+  
+  [data-hover]:hover .hover-text,
+  [data-hover]:active .hover-text {
+    opacity: 1;
+    color: rgb(143, 10, 10);
+  }
+  
 }
