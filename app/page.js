@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import Link from "next/link";
 import { FaInstagram, FaYoutube, FaTiktok, FaFacebook, FaWhatsapp } from 'react-icons/fa';
 import { Great_Vibes, Montserrat } from 'next/font/google'
+import Loading from './dashboard/loading';
 
 const great_vibes = Great_Vibes({
   subsets: ['latin'],
@@ -40,7 +41,8 @@ export default function Home() {
           <source
             src="/videos/mainVideoLg.mp4"
             alt="Video de Valeria saludando un condor en el cielo."
-            type="video/mp4" />
+            type="video/mp4" 
+            />
           Tu navegador no admite la etiqueta de video.
         </video>
         <div className="absolute inset-0 flex bg-black bg-opacity-30 lg:bg-opacity-10 items-center w-screen justify-center pl-8">

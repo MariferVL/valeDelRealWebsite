@@ -149,7 +149,6 @@ export default function ServicesPage() {
   return (
 
     <>
-      <Suspense fallback={<Loading />}>
         <main className='relative min-h-screen'>
           <section
             id='hero-section'
@@ -191,7 +190,6 @@ export default function ServicesPage() {
           </div>
         </main>
         <Footer />
-      </Suspense>
     </>
   );
 }
