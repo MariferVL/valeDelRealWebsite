@@ -12,7 +12,7 @@ module.exports = {
         end: '#e0a417',
         primary: '#e3a617',
         secondary: '#d82633',
-        darkRed:'#76151b',
+        darkRed:'#8d1920',
         icon: '#b81319',
         accent: '#d82933',
         text: '#ffffff',

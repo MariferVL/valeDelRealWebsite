@@ -148,25 +148,26 @@ export default function ServicesPage() {
   return (
 
     <>
-      <main>
+      <main className='relative min-h-screen'>
         <section
           id='hero-section'
-          className="relative mb-16 z-1 bg-[url('/images/mainService.png')] bg-contain lg:bg-cover bg-center bg-no-repeat"
+          className="relative w-full h-screen mt-0 mb-16 z-1 bg-[url('/images/mainService.png')] bg-cover bg-center bg-no-repeat"
+          
         >
           <div
-            className="absolute inset-0 bg-white bg-opacity-40 lg:bg-opacity-10"
+            className="absolute inset-0 bg-black bg-opacity-60 lg:bg-white bg-opacity-30 lg:bg-opacity-10"
           ></div>
 
           <div
-            className="relative mx-auto max-w-screen-xl pl-4 sm:px-6 lg:flex lg:h-screen lg:justify-end lg:items-center lg:pl-8"
+            className="relative mx-auto max-w-screen-xl pt-72 px-4 lg:pt-44 lg:flex h-screen lg:justify-end items-center lg:pl-8"
           >
-            <div className="max-w-lg lg:p-5 lg:mt-48  rtl:sm:text-right lg:bg-light lg:bg-opacity-30">
-              <h1 className={`text-5xl font-extrabold font-bold text-left mb-3 text-white  ${great_vibes.className}`}>
+            <div className="max-w-lg p-4 lg:p-5 rtl:sm:text-right lg:bg-light lg:bg-opacity-30">
+              <h1 className={`text-6xl lg:text-5xl font-extrabold font-bold text-left mb-6 lg:mb-3 text-white  ${great_vibes.className}`}>
                 Descubre una Jornada de
-                <strong className={`block text-4xl font-extrabold text-rose-700 ${montserrat.className}`}> Autoconocimiento y Bienestar. </strong>
+                <strong className={`block text-3xl lg:text-4xl font-extrabold text-darkRed lg:text-rose-700 ${montserrat.className}`}> Autoconocimiento y Bienestar. </strong>
               </h1>
 
-              <p className={`max-w-lg sm:text-3xl/relaxed  ${great_vibes.className}`}>
+              <p className={`max-w-lg text-4xl/relaxed text-white lg:text-black lg:text-3xl/relaxed  ${great_vibes.className}`}>
                 Transforma tu vida a través de servicios especializados en sexualidad sagrada y crecimiento personal.
               </p>
             </div>
