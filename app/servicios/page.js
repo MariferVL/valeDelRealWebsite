@@ -1,7 +1,8 @@
-import ServiceCard from '@/components/servicecard';
-import Link from 'next/link';
+import { Suspense } from 'react';
 import { Great_Vibes, Montserrat } from 'next/font/google'
+import ServiceCard from '@/components/servicecard';
 import Footer from '@/components/footer';
+import Loading from '../dashboard/loading';
 
 const great_vibes = Great_Vibes({
   subsets: ['latin'],
@@ -148,47 +149,49 @@ export default function ServicesPage() {
   return (
 
     <>
-      <main className='relative min-h-screen'>
-        <section
-          id='hero-section'
-          className="relative w-full h-screen mt-0 mb-16 z-1 bg-[url('/images/mainService.png')] bg-cover bg-center bg-no-repeat"
-          
-        >
-          <div
-            className="absolute inset-0 bg-black bg-opacity-60 lg:bg-white bg-opacity-30 lg:bg-opacity-10"
-          ></div>
+      <Suspense fallback={<Loading />}>
+        <main className='relative min-h-screen'>
+          <section
+            id='hero-section'
+            className="relative w-full h-screen mt-0 mb-16 z-1 bg-[url('/images/mainService.png')] bg-cover bg-center bg-no-repeat"
 
-          <div
-            className="relative mx-auto max-w-screen-xl pt-72 px-4 lg:pt-44 lg:flex h-screen lg:justify-end items-center lg:pl-8"
           >
-            <div className="max-w-lg p-4 lg:p-5 rtl:sm:text-right lg:bg-light lg:bg-opacity-30">
-              <h1 className={`text-6xl lg:text-5xl font-extrabold font-bold text-left mb-6 lg:mb-3 text-white  ${great_vibes.className}`}>
-                Descubre una Jornada de
-                <strong className={`block text-3xl lg:text-4xl font-extrabold text-darkRed lg:text-rose-700 ${montserrat.className}`}> Autoconocimiento y Bienestar. </strong>
-              </h1>
+            <div
+              className="absolute inset-0 bg-black bg-opacity-60 lg:bg-white bg-opacity-30 lg:bg-opacity-10"
+            ></div>
 
-              <p className={`max-w-lg text-4xl/relaxed text-white lg:text-black lg:text-3xl/relaxed  ${great_vibes.className}`}>
-                Transforma tu vida a través de servicios especializados en sexualidad sagrada y crecimiento personal.
-              </p>
-            </div>
+            <div
+              className="relative mx-auto max-w-screen-xl pt-72 px-4 lg:pt-44 lg:flex h-screen lg:justify-end items-center lg:pl-8"
+            >
+              <div className="max-w-lg p-4 lg:p-5 rtl:sm:text-right lg:bg-light lg:bg-opacity-30">
+                <h1 className={`text-6xl lg:text-5xl font-extrabold font-bold text-left mb-6 lg:mb-3 text-white  ${great_vibes.className}`}>
+                  Descubre una Jornada de
+                  <strong className={`block text-3xl lg:text-4xl font-extrabold text-darkRed lg:text-rose-700 ${montserrat.className}`}> Autoconocimiento y Bienestar. </strong>
+                </h1>
 
-          </div>
-        </section>
-        <div className='mx-8'>
-          <div className="relative my-6 mx-auto w-64 h-16">
-            <div className="absolute inset-0 bg-center bg-no-repeat bg-cover" style={{ backgroundImage: "url('/images/separador.png')" }}></div>
-          </div>
-          {valeriaServices.map((service, index) => (
-            <>
-              <ServiceCard key={index} {...service} />
-              <div key={index} className="relative my-6 mx-auto w-64 h-16">
-                <div key={index+1} className="absolute inset-0 bg-center bg-no-repeat bg-cover" style={{ backgroundImage: "url('/images/separador.png')" }}></div>
+                <p className={`max-w-lg text-4xl/relaxed text-white lg:text-black lg:text-3xl/relaxed  ${great_vibes.className}`}>
+                  Transforma tu vida a través de servicios especializados en sexualidad sagrada y crecimiento personal.
+                </p>
               </div>
-            </>
-          ))}
-        </div>
-      </main>
-      <Footer />
+
+            </div>
+          </section>
+          <div className='mx-8'>
+            <div className="relative my-6 mx-auto w-64 h-16">
+              <div className="absolute inset-0 bg-center bg-no-repeat bg-cover" style={{ backgroundImage: "url('/images/separador.png')" }}></div>
+            </div>
+            {valeriaServices.map((service, index) => (
+              <>
+                <ServiceCard key={index} {...service} />
+                <div key={index} className="relative my-6 mx-auto w-64 h-16">
+                  <div key={index + 1} className="absolute inset-0 bg-center bg-no-repeat bg-cover" style={{ backgroundImage: "url('/images/separador.png')" }}></div>
+                </div>
+              </>
+            ))}
+          </div>
+        </main>
+        <Footer />
+      </Suspense>
     </>
   );
 }
