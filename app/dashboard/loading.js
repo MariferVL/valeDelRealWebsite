@@ -1,20 +1,10 @@
-"use client";
-import Lottie from 'react-lottie-player';
-import lottieJson from '../../public/images/loading.json';
-import Image from 'next/image';
+import Script from 'next/script'
 
 export default function Loading() {
   return (
     <div className="flex flex-col justify-center items-center h-screen bg-[url('/images/load2.png')] bg-cover bg-center bg-no-repeat">
-      <Lottie
-        loop
-        animationData={lottieJson}
-        play
-        speed={3}
-        className="w-1/2 h-1/2 z-10"  
-      />
-
-      <p className="text-white text-2xl mt-4">Cargando...</p>
+      <Script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module" />
+      <dotlottie-player src="https://lottie.host/481006b9-13e1-4fdd-bcc7-c476d686201c/1OfqrrvbWH.json" background="transparent" speed="1" style={{ width: '300px', height: '300px' }} loop autoplay></dotlottie-player>
     </div>
-  );
+  )
 }
