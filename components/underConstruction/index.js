@@ -2,31 +2,34 @@
 import { useEffect, useState } from 'react';
 
 export default function UnderConstruction() {
-  const [windowWidth, setWindowWidth] = useState(0)
+  const [windowWidth, setWindowWidth] = useState(
+    typeof window !== 'undefined' ? window.innerWidth : 0
+  );
 
   useEffect(() => {
-    setWindowWidth(window.innerWidth);
+    if (typeof window !== 'undefined') {
+      const handleResize = () => {
+        setWindowWidth(window.innerWidth);
+      };
 
-    const handleResize = () => {
-      setWindowWidth(window.innerWidth);
-    };
+      window.addEventListener('resize', handleResize);
 
-    window.addEventListener('resize', handleResize);
-
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
+      return () => {
+        window.removeEventListener('resize', handleResize);
+      };
+    }
   }, []);
 
-  const getVideoSrc = () => {
-    return windowWidth > 700 ? '/videos/underConstructionVideolg.mp4' : '/videos/underConstructionVideosm.mp4';
-  };
+  const videoSrc =
+    windowWidth > 700
+      ? '/videos/underConstructionVideolg.mp4'
+      : '/videos/underConstructionVideosm.mp4';
 
   return (
     <div>
       <video preload="none" autoPlay muted loop>
         <source
-          src={getVideoSrc()}
+          src={videoSrc}
           alt="Video sobre página en construcción."
           type="video/mp4"
         />

@@ -181,8 +181,8 @@ export default function ServicesPage() {
           {valeriaServices.map((service, index) => (
             <>
               <ServiceCard key={index} {...service} />
-              <div className="relative my-6 mx-auto w-64 h-16">
-                <div className="absolute inset-0 bg-center bg-no-repeat bg-cover" style={{ backgroundImage: "url('/images/separador.png')" }}></div>
+              <div key={index} className="relative my-6 mx-auto w-64 h-16">
+                <div key={index+1} className="absolute inset-0 bg-center bg-no-repeat bg-cover" style={{ backgroundImage: "url('/images/separador.png')" }}></div>
               </div>
             </>
           ))}
