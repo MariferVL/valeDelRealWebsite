@@ -3,11 +3,9 @@ import Footer from "@/components/footer";
 import Image from "next/image";
 import Link from "next/link";
 import { FaInstagram, FaYoutube, FaTiktok, FaFacebook, FaWhatsapp } from 'react-icons/fa';
-import Loading from "../dashboard/loading";
 import { useState } from "react";
 
 export default function AboutPage() {
-    const [loading, setLoading] = useState(true);
 
     return (
         <>
@@ -128,7 +126,6 @@ export default function AboutPage() {
 
                         <div className="w-full lg:w-2/5 flex items-center justify-center lg:justify-start">
                             <div className="flex justify-center">
-                                {loading && <Loading />}
 
                                 <Image
                                     src="/images/valeria/vale4.jpg"
@@ -136,7 +133,6 @@ export default function AboutPage() {
                                     className="rounded-none lg:rounded-lg shadow-2xl lg:block hidden"
                                     width={1000}
                                     height={800}
-                                    onLoad={() => setLoading(false)}
                                 />
                             </div>
                         </div>

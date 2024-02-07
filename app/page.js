@@ -3,7 +3,6 @@ import { useEffect, useState } from 'react';
 import Link from "next/link";
 import { FaInstagram, FaYoutube, FaTiktok, FaFacebook, FaWhatsapp } from 'react-icons/fa';
 import { Great_Vibes, Montserrat } from 'next/font/google'
-import Loading from './dashboard/loading';
 
 const great_vibes = Great_Vibes({
   subsets: ['latin'],
