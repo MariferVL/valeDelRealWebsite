@@ -27,10 +27,10 @@ const valeriaServices = [
       { name: 'Requisitos', description: 'No se requieren conocimientos previos, solo una mente abierta y un deseo de crecimiento personal.' },
     ],
     images: [
-      "/images/workshops/formacion1.jpg",
-      "/images/workshops/formacion2.jpg",
-      "/images/workshops/formacion3.png",
-      "/images/workshops/formacion4.png",
+      "/images/formacion1.jpg",
+      "/images/formacion2.jpg",
+      "/images/formacion3.png",
+      "/images/formacion4.png",
     ],
   },
   {
@@ -45,10 +45,10 @@ const valeriaServices = [
       { name: 'Requisitos', description: 'Abierto a todos, sin restricciones de género o experiencia previa en el tema.' },
     ],
     images: [
-      "/images/workshops/diplomado1.png",
-      "/images/workshops/diplomado2.png",
-      "/images/workshops/diplomado3.png",
-      "/images/workshops/diplomado4.png",
+      "/images/diplomado1.png",
+      "/images/diplomado2.png",
+      "/images/diplomado3.png",
+      "/images/diplomado4.png",
     ],
   },
   {
@@ -63,10 +63,10 @@ const valeriaServices = [
       { name: 'Requisitos', description: 'No se requieren habilidades específicas, solo el deseo de explorar y conectarse.' },
     ],
     images: [
-      "/images/workshops/taller2.jpg",
-      "/images/workshops/taller3.jpg",
-      "/images/workshops/taller4.jpg",
-      "/images/workshops/taller1.png",
+      "/images/taller2.jpg",
+      "/images/taller3.jpg",
+      "/images/taller4.jpg",
+      "/images/taller1.png",
     ],
   },
   {
@@ -81,10 +81,10 @@ const valeriaServices = [
       { name: 'Requisitos', description: 'Disposición para la exploración personal y apertura a nuevas experiencias.' },
     ],
     images: [
-      "/images/workshops/extra1.jpg",
-      "/images/workshops/extra2.jpg",
-      "/images/workshops/w14.jpg",
-      "/images/workshops/w1.jpg",
+      "/images/extra1.jpg",
+      "/images/extra2.jpg",
+      "/images/w14.jpg",
+      "/images/w1.jpg",
     ],
   },
   {
@@ -99,10 +99,10 @@ const valeriaServices = [
       { name: 'Requisitos', description: 'Disponibilidad para la introspección y el compromiso con el proceso.' },
     ],
     images: [
-      "/images/workshops/individual1.png",
-      "/images/workshops/individual2.png",
-      "/images/workshops/individual3.png",
-      "/images/workshops/individual4.png",
+      "/images/individual1.png",
+      "/images/individual2.png",
+      "/images/individual3.png",
+      "/images/individual4.png",
     ],
   },
   {
@@ -117,10 +117,10 @@ const valeriaServices = [
       { name: 'Requisitos', description: 'Participación activa y respeto hacia los demás miembros del grupo.' },
     ],
     images: [
-      "/images/workshops/constela1.jpg",
-      "/images/workshops/constela2.jpg",
-      "/images/workshops/constela3.jpg",
-      "/images/workshops/constela4.jpg",
+      "/images/constela1.jpg",
+      "/images/constela2.jpg",
+      "/images/constela3.jpg",
+      "/images/constela4.jpg",
     ],
   },
   {
@@ -135,10 +135,10 @@ const valeriaServices = [
       { name: 'Requisitos', description: 'Compromiso con el proceso terapéutico y apertura a la transformación.' },
     ],
     images: [
-      "/images/workshops/ext1.png",
-      "/images/workshops/ext2.png",
-      "/images/workshops/ext3.png",
-      "/images/workshops/ext4.png",
+      "/images/ext1.png",
+      "/images/ext2.png",
+      "/images/ext3.png",
+      "/images/ext4.png",
     ],
   },
 ];

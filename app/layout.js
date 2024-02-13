@@ -8,7 +8,7 @@ export const metadata = {
   description: 'Descubre las formaciones, talleres, retiros y acompañamiento individual de Valeria Del Real. Explora la sexualidad sagrada y sanación integral.',
   keywords: 'terapia, sexualidad sagrada, formaciones, diplomados, retiros, constelaciones familiares, talleres vivenciales, acompañamiento en sexualidad, bienestar integral, Valeria Del Real, canalización, estudio, renovación, terapeuta, Chile, extranjero',
   author: 'María-Fernanda Villalobos López',
-  image: '/images/logos/roundLogo.png',
+  image: '/images/mediaLogo.png',
   url: 'https://valeriadelreal.web.app/',
   siteName: 'Valeria Del Real - Terapeuta en Sexualidad Sagrada',
 };

@@ -2,10 +2,10 @@ import Image from "next/image";
 import Link from "next/link";
 
 const Button = () => {
-    return (
-      <Link href="/">
+  return (
+    <Link href="/">
       <Image
-        src="/images/logos/mainLogo.png"
+        src="/images/mainLogo.png"
         alt="Logo"
         width={100}
         height={100}
@@ -13,6 +13,6 @@ const Button = () => {
       />
 
     </Link>
-    );
-  };
-  export default Button;
+  );
+};
+export default Button;
