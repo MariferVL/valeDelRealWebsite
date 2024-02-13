@@ -43,7 +43,7 @@ export default function Home() {
         <div className="w-full h-screen lg:h-auto" style={windowWidth < 770 ? { objectFit: 'cover', objectPosition: '47%' } : {}}>
           <Image
             src="/images/mainPic.png"
-            alt="Imagen de reemplazo"
+            alt="Imagen de Valeria Del Real en la naturaleza saludando y conenctando con un condor en los cielos"
             width={windowWidth}
             height={windowHeight}
             quality={100}
