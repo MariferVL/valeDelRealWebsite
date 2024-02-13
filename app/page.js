@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useState } from 'react';
 import Link from "next/link";
+import Image from 'next/image';
 import { FaInstagram, FaYoutube, FaTiktok, FaFacebook, FaWhatsapp } from 'react-icons/fa';
 import { Great_Vibes, Montserrat } from 'next/font/google'
 
@@ -17,12 +18,15 @@ const montserrat = Montserrat({
 
 export default function Home() {
   const [windowWidth, setWindowWidth] = useState(0)
+  const [windowHeight, setWindowHeight] = useState(0);
 
   useEffect(() => {
     setWindowWidth(window.innerWidth);
+    setWindowHeight(window.innerHeight);
 
     const handleResize = () => {
       setWindowWidth(window.innerWidth);
+      setWindowHeight(window.innerHeight);
     };
 
     window.addEventListener('resize', handleResize);
@@ -36,14 +40,16 @@ export default function Home() {
   return (
     <div className='relative min-h-screen'>
       <main className="relative">
-        <video preload="none" autoPlay muted loop className="w-full h-screen lg:h-auto" style={windowWidth < 770 ? { objectFit: 'cover', objectPosition: '47%' } : {}}>
-          <source
-            src="/videos/mainVideoLg.mp4"
-            alt="Video de Valeria saludando un condor en el cielo."
-            type="video/mp4" 
-            />
-          Tu navegador no admite la etiqueta de video.
-        </video>
+        <div className="w-full h-screen lg:h-auto" style={windowWidth < 770 ? { objectFit: 'cover', objectPosition: '47%' } : {}}>
+          <Image
+            src="/images/mainPic.png"
+            alt="Imagen de reemplazo"
+            width={windowWidth}
+            height={windowHeight}
+            quality={100}
+            className="w-full h-full object-cover"
+          />
+        </div>
         <div className="absolute inset-0 flex bg-black bg-opacity-30 lg:bg-opacity-10 items-center w-screen justify-center pl-8">
           <div className="w-screen text-center justify-center lg:text-white lg:ml-64 lg:justify-end">
             <h1 className={`text-primary font-extrabold text-4xl font-bold mb-6 ${montserrat.className}`}>
