@@ -137,7 +137,7 @@ export default function AboutPage() {
                                     height={800}
                                     priority={true} 
                                     loading="eager" 
-                                    placeholder="blur" 
+                                     
                                 />
                             </div>
                         </div>

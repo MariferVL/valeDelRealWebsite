@@ -1,7 +1,36 @@
 {
-  "name": "next-project",
-  "version": "1.0.0",
+  "name": "valeria-delreal-website",
+  "version": "1.0.1",
   "private": true,
+  "description": "Sitio web de Valeria Del Real - Escuela de Sexualidad Sagrada Latinoamericana",
+  "keywords": [
+    "terapia",
+    "sexualidad sagrada",
+    "formaciones",
+    "diplomados",
+    "retiros",
+    "constelaciones familiares",
+    "talleres vivenciales",
+    "acompañamiento en sexualidad",
+    "bienestar integral",
+    "Valeria Del Real",
+    "canalización",
+    "estudio",
+    "renovación",
+    "terapeuta",
+    "Chile",
+    "extranjero"
+  ],
+  "author": "María-Fernanda Villalobos López",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MariferVL/valeDelRealWebsite.git"
+  },
+  "homepage": "https://valeriadelreal.web.app/",
+  "bugs": {
+    "url": "https://github.com/tuusuario/next-project/issues"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -12,6 +41,7 @@
   "dependencies": {
     "firebase": "^10.7.2",
     "next": "^14.1.0",
+    "next-google-fonts": "^2.2.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^5.0.1",

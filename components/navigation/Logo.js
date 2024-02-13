@@ -1,4 +1,3 @@
-// Logo.js
 "use client";
 import Image from "next/image";
 import Link from "next/link";
@@ -23,7 +22,7 @@ export default function Logo({ showButton, logoSrc, closeSidebarOnClick }) {
           height={429}
           priority={true} 
           loading="eager" 
-          placeholder="blur" 
+           
         />
       </Link>
       <div
