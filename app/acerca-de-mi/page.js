@@ -135,6 +135,9 @@ export default function AboutPage() {
                                     className="rounded-none lg:rounded-lg shadow-2xl lg:block hidden"
                                     width={1000}
                                     height={800}
+                                    priority={true} 
+                                    loading="eager" 
+                                    placeholder="blur" 
                                 />
                             </div>
                         </div>

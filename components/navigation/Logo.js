@@ -21,7 +21,9 @@ export default function Logo({ showButton, logoSrc, closeSidebarOnClick }) {
           alt="Logo"
           width={974}
           height={429}
-          priority
+          priority={true} 
+          loading="eager" 
+          placeholder="blur" 
         />
       </Link>
       <div

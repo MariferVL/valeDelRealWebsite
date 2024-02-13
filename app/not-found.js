@@ -30,7 +30,9 @@ export default function NotFound() {
         alt="404 Error. Página No Encontrada"
         width={windowWidth < 700 ? 800 : 1366}
         height={windowWidth < 700 ? 800 : 768}
-        layout="responsive" 
+        priority={true} 
+        loading="eager" 
+        placeholder="blur" 
       />
 
       <Link href="/" className="absolute left-111 top-318 lg:left-885 lg:top-474 bg-transparent border border-secondary text-secondary rounded-full px-4 py-2">

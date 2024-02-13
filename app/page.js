@@ -48,6 +48,9 @@ export default function Home() {
             height={windowHeight}
             quality={100}
             className="w-full h-full object-cover"
+            priority={true} 
+            loading="eager" 
+            placeholder="blur" 
           />
         </div>
         <div className="absolute inset-0 flex bg-black bg-opacity-30 lg:bg-opacity-10 items-center w-screen justify-center pl-8">

@@ -28,7 +28,7 @@ export default function UnderConstruction() {
   return (
     <div>
       {/* FIXME: */}
-      <video preload="none" autoPlay muted loop>
+      <video preload="auto" autoPlay muted loop>
         <source
           src={videoSrc}
           alt="Video sobre página en construcción."
