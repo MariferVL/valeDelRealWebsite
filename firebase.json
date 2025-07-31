@@ -22,7 +22,7 @@
         ]
       },
       {
-        "source": "/videos/**",
+        "source": "/animations/**",
         "headers": [
           {
             "key": "Cache-Control",
