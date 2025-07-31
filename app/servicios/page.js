@@ -1,7 +1,6 @@
 import { Suspense } from 'react';
 import { Great_Vibes, Montserrat } from 'next/font/google'
 import ServiceCard from '@/components/servicecard';
-import Footer from '@/components/footer';
 
 const great_vibes = Great_Vibes({
   subsets: ['latin'],
@@ -188,7 +187,7 @@ export default function ServicesPage() {
             ))}
           </div>
         </main>
-        <Footer />
+        
     </>
   );
 }

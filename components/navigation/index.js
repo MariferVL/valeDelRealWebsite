@@ -1,10 +1,16 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import { FaInstagram, FaYoutube, FaTiktok, FaFacebook, FaWhatsapp } from 'react-icons/fa';
+import {
+  FaInstagram,
+  FaYoutube,
+  FaTiktok,
+  FaFacebook,
+  FaWhatsapp,
+} from "react-icons/fa";
 import Logo from "./Logo";
-import HoverLink from "../hoverlink";
 import Sidebar from "./Sidebar";
+import HoverLink from "../HoverLink";
 
 export default function Navigation() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -16,13 +22,12 @@ export default function Navigation() {
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
   };
-  
+
   const closeSidebar = () => {
     setIsSidebarOpen(false);
     return isSidebarOpen;
   };
 
-  
   useEffect(() => {
     const handleScroll = () => {
       let currentScrollY = window.scrollY;
@@ -53,15 +58,23 @@ export default function Navigation() {
     };
   }, [width]);
 
-  const textColor = isScrolling ? 'text-yellow-600' : 'text-white';
+  const textColor = isScrolling ? "text-yellow-600" : "text-white";
 
   return (
     <nav
       className={`md:p-2 fixed top-0 w-full z-20`}
-      style={{ backgroundColor: `rgba(227, 166, 23, 0.3)`, backdropFilter: `blur(${blur}px)` }}
+      style={{
+        backgroundColor: `rgba(227, 166, 23, 0.3)`,
+        backdropFilter: `blur(${blur}px)`,
+      }}
     >
       <div className="flex justify-between items-center mx-16">
-        <Logo showButton={showButton} logoSrc={isScrolling ? "/images/mainLogo2.webp" : "/images/mainLogo1.webp"} />
+        <Logo
+          showButton={showButton}
+          logoSrc={
+            isScrolling ? "/images/mainLogo2.webp" : "/images/mainLogo1.webp"
+          }
+        />
 
         {/* Hamburger icon for mobile */}
 
@@ -76,14 +89,19 @@ export default function Navigation() {
             viewBox="0 0 24 24"
             stroke="currentColor"
           >
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
           </svg>
           <span className="sr-only">Abrir menú</span>
         </button>
 
         {/* Navbar Links for Desktop */}
         <ul className={`hidden ml-72 md:flex space-x-2 ${textColor}`}>
-          <li >
+          <li>
             <HoverLink
               href="/acerca-de-mi"
               text="Descubre mi Esencia"
@@ -115,7 +133,8 @@ export default function Navigation() {
               ariaLabel="Ir a la página de Testimonios"
             />
           </li>
-          <li className="group relative text-white flex items-center">
+          {/* Extra section: gallery and Q&A */}
+          {/* <li className="group relative text-white flex items-center">
             <div>
               <button type="button" className={`inline-flex w-32 items-center justify-center gap-x-1.5 rounded-md px-3 py-2 text-sm font-semibold ${textColor}`} id="menu-button" aria-expanded="true" aria-haspopup="true">
                 Recursos
@@ -136,7 +155,7 @@ export default function Navigation() {
                     activeText="Ingresando"
                     ariaLabel="Ir a la página de Descargables Espirituales"
                   />
-                </li> */}
+                </li> 
                 <li>
                   <HoverLink
                     href="/galeria"
@@ -161,8 +180,8 @@ export default function Navigation() {
                 </li>
               </ul>
             </div>
+          </li> */}
 
-          </li>
           {/* <li className="pr-3">
             <HoverLink
               href="/blog"
@@ -175,32 +194,58 @@ export default function Navigation() {
           </li> */}
           <li className="flex justify-between items-center">
             <div className="flex gap-2">
-              <Link href="https://api.whatsapp.com/send?phone=56990897824&text=Hola,%20quiero%20recibir%20informaci%C3%B3n%20de%20la%20Escuela%20de%20Sexualidad%20Sagrada%20Latinoamericana,%20gracias" target="_blank" rel="noopener noreferrer" title="Escríbeme en Whatsapp" aria-label="Escribir a Valeria del Real en Whatsapp">
+              <Link
+                href="https://api.whatsapp.com/send?phone=56990897824&text=Hola,%20quiero%20recibir%20informaci%C3%B3n%20de%20la%20Escuela%20de%20Sexualidad%20Sagrada%20Latinoamericana,%20gracias"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="Escríbeme en Whatsapp"
+                aria-label="Escribir a Valeria del Real en Whatsapp"
+              >
                 <FaWhatsapp className="text-xl text-white hover:text-secondary transition duration-300" />
               </Link>
-              <Link href="https://www.instagram.com/valeriadelreald" target="_blank" rel="noopener noreferrer" title="Sígueme en Instagram" aria-label="Ir a Instagram de Valeria del Real">
+              <Link
+                href="https://www.instagram.com/valeriadelreald"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="Sígueme en Instagram"
+                aria-label="Ir a Instagram de Valeria del Real"
+              >
                 <FaInstagram className="text-xl text-white hover:text-secondary transition duration-300" />
               </Link>
-              <Link href="https://www.youtube.com/channel/UCL3girZaKpqnHMoaGp0AwhQ" target="_blank" rel="noopener noreferrer" title="Sígueme en Youtube" aria-label="Ir a Youtube de Valeria del Real">
+              <Link
+                href="https://www.youtube.com/channel/UCL3girZaKpqnHMoaGp0AwhQ"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="Sígueme en Youtube"
+                aria-label="Ir a Youtube de Valeria del Real"
+              >
                 <FaYoutube className="text-xl text-white hover:text-secondary hover:scale-125 active:text-yellow-200 transition duration-300" />
               </Link>
-              <Link href="https://www.tiktok.com/@valeriadelreald" target="_blank" rel="noopener noreferrer" title="Sígueme en TikTok" aria-label="Ir a TikTok de Valeria del Real">
+              <Link
+                href="https://www.tiktok.com/@valeriadelreald"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="Sígueme en TikTok"
+                aria-label="Ir a TikTok de Valeria del Real"
+              >
                 <FaTiktok className="text-xl text-white hover:text-secondary transition duration-300" />
               </Link>
-              <Link href="https://web.facebook.com/valeria.d.9?_rdc=1&_rdr" target="_blank" rel="noopener noreferrer" title="Sígueme en Facebook" aria-label="Ir a Facebook de Valeria del Real">
+              <Link
+                href="https://web.facebook.com/valeria.d.9?_rdc=1&_rdr"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="Sígueme en Facebook"
+                aria-label="Ir a Facebook de Valeria del Real"
+              >
                 <FaFacebook className="text-xl text-white hover:text-secondary transition duration-300" />
               </Link>
             </div>
           </li>
         </ul>
-
-
       </div>
 
       {/* Sidebar for Mobile */}
       {isSidebarOpen && <Sidebar closeSidebar={closeSidebar} />}
-
     </nav>
   );
-};
-
+}

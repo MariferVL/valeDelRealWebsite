@@ -1,5 +1,5 @@
 "use client";
-import Footer from "@/components/footer";
+import Footer from "@/components/Footer";
 import Image from "next/image";
 import Link from "next/link";
 import { FaInstagram, FaYoutube, FaTiktok, FaFacebook, FaWhatsapp } from 'react-icons/fa';
@@ -144,7 +144,7 @@ export default function AboutPage() {
                     </div>
                 </div>
             </main>
-            <Footer />
+            
         </>
     );
 };
