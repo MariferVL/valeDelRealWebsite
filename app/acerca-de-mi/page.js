@@ -1,9 +1,7 @@
 "use client";
-import Footer from "@/components/Footer";
 import Image from "next/image";
 import Link from "next/link";
 import { FaInstagram, FaYoutube, FaTiktok, FaFacebook, FaWhatsapp } from 'react-icons/fa';
-import { useState } from "react";
 
 export default function AboutPage() {
 

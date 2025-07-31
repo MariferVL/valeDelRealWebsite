@@ -2,6 +2,8 @@ import "./globals.css";
 import { Suspense } from "react";
 import Loading from "./dashboard/loading";
 import LayoutClient from "@/components/LayoutClient";
+import { montserrat, great_vibes } from "./fonts"; 
+
 
 export const metadata = {
   title: "Valeria Del Real - Escuela de Sexualidad Sagrada Latinoamericana",
@@ -17,7 +19,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="es" className="h-full"> 
+    <html lang="es" className={`${montserrat.variable} ${great_vibes.variable} h-full`}> 
       <head>
         <link rel="preload" href="/images/heroe.webp" as="image" />
       </head>

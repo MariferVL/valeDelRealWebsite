@@ -12,6 +12,7 @@
   --accent: #d82933;
   --text: #ffffff;
   --translucid: #e3a61724;
+  --dark-red-hover: rgb(143, 10, 10);
 }
 
 /* @media (prefers-color-scheme: dark) {
@@ -47,7 +48,7 @@ a {
 }
 
 .hero-background {
-  background-image: url('/images/heroeb.webp');
+  background-image: url('/images/heroe.webp');
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -82,7 +83,7 @@ a {
   background-position: center;
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
-  z-index: -1; 
+  z-index: -1;
 }
 
 [data-hover]:hover::before {
@@ -110,33 +111,34 @@ a {
 
 [data-hover]:hover .hover-text {
   opacity: 1;
-  color: rgb(143, 10, 10);
-  font-family: 'Montserrat', sans-serif;
+  color: var(--dark-red-hover);
+  font-family: var(--font-montserrat);
   font-weight: 700;
   font-size: 1.1rem;
 }
 
 [data-hover]::before {
-  background-image: url('/images/sun1.webp'); 
+  background-image: url('/images/sun1.webp');
   width: 100%;
   height: 100%;
 }
 
 @media (max-width: 800px) {
+
   [data-hover]:hover::before,
   [data-hover]:active::before {
     opacity: 1;
   }
-  
+
   [data-hover]:hover .base-text,
   [data-hover]:active .base-text {
     opacity: 0;
   }
-  
+
   [data-hover]:hover .hover-text,
   [data-hover]:active .hover-text {
     opacity: 1;
     color: rgb(143, 10, 10);
   }
-  
+
 }
