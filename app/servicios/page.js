@@ -27,10 +27,10 @@ const valeriaServices = [
       { name: 'Requisitos', description: 'No se requieren conocimientos previos, solo una mente abierta y un deseo de crecimiento personal.' },
     ],
     images: [
-      "/images/formacion1.jpg",
-      "/images/formacion2.jpg",
-      "/images/formacion3.png",
-      "/images/formacion4.png",
+      "/images/formacion1.webp",
+      "/images/formacion2.webp",
+      "/images/formacion3.webp",
+      "/images/formacion4.webp",
     ],
   },
   {
@@ -45,10 +45,10 @@ const valeriaServices = [
       { name: 'Requisitos', description: 'Abierto a todos, sin restricciones de género o experiencia previa en el tema.' },
     ],
     images: [
-      "/images/diplomado1.png",
-      "/images/diplomado2.png",
-      "/images/diplomado3.png",
-      "/images/diplomado4.png",
+      "/images/diplomado1.webp",
+      "/images/diplomado2.webp",
+      "/images/diplomado3.webp",
+      "/images/diplomado4.webp",
     ],
   },
   {
@@ -63,10 +63,10 @@ const valeriaServices = [
       { name: 'Requisitos', description: 'No se requieren habilidades específicas, solo el deseo de explorar y conectarse.' },
     ],
     images: [
-      "/images/taller2.jpg",
-      "/images/taller3.jpg",
-      "/images/taller4.jpg",
-      "/images/taller1.png",
+      "/images/taller2.webp",
+      "/images/taller3.webp",
+      "/images/taller4.webp",
+      "/images/taller1.webp",
     ],
   },
   {
@@ -81,10 +81,10 @@ const valeriaServices = [
       { name: 'Requisitos', description: 'Disposición para la exploración personal y apertura a nuevas experiencias.' },
     ],
     images: [
-      "/images/extra1.jpg",
-      "/images/extra2.jpg",
-      "/images/w14.jpg",
-      "/images/w1.jpg",
+      "/images/extra1.webp",
+      "/images/extra2.webp",
+      "/images/w14.webp",
+      "/images/w1.webp",
     ],
   },
   {
@@ -99,10 +99,10 @@ const valeriaServices = [
       { name: 'Requisitos', description: 'Disponibilidad para la introspección y el compromiso con el proceso.' },
     ],
     images: [
-      "/images/individual1.png",
-      "/images/individual2.png",
-      "/images/individual3.png",
-      "/images/individual4.png",
+      "/images/individual1.webp",
+      "/images/individual2.webp",
+      "/images/individual3.webp",
+      "/images/individual4.webp",
     ],
   },
   {
@@ -117,10 +117,10 @@ const valeriaServices = [
       { name: 'Requisitos', description: 'Participación activa y respeto hacia los demás miembros del grupo.' },
     ],
     images: [
-      "/images/constela1.jpg",
-      "/images/constela2.jpg",
-      "/images/constela3.jpg",
-      "/images/constela4.jpg",
+      "/images/constela1.webp",
+      "/images/constela2.webp",
+      "/images/constela3.webp",
+      "/images/constela4.webp",
     ],
   },
   {
@@ -135,10 +135,10 @@ const valeriaServices = [
       { name: 'Requisitos', description: 'Compromiso con el proceso terapéutico y apertura a la transformación.' },
     ],
     images: [
-      "/images/ext1.png",
-      "/images/ext2.png",
-      "/images/ext3.png",
-      "/images/ext4.png",
+      "/images/ext1.webp",
+      "/images/ext2.webp",
+      "/images/ext3.webp",
+      "/images/ext4.webp",
     ],
   },
 ];
@@ -151,7 +151,7 @@ export default function ServicesPage() {
         <main className='relative min-h-screen'>
           <section
             id='hero-section'
-            className="relative w-full h-screen mt-0 mb-16 z-1 bg-[url('/images/mainService.png')] bg-cover bg-center bg-no-repeat"
+            className="relative w-full h-screen mt-0 mb-16 z-1 bg-[url('/images/mainService.webp')] bg-cover bg-center bg-no-repeat"
 
           >
             <div
@@ -176,13 +176,13 @@ export default function ServicesPage() {
           </section>
           <div className='mx-8'>
             <div className="relative my-6 mx-auto w-64 h-16">
-              <div className="absolute inset-0 bg-center bg-no-repeat bg-cover" style={{ backgroundImage: "url('/images/separador.png')" }}></div>
+              <div className="absolute inset-0 bg-center bg-no-repeat bg-cover" style={{ backgroundImage: "url('/images/separador.webp')" }}></div>
             </div>
             {valeriaServices.map((service, index) => (
               <>
                 <ServiceCard key={index} {...service} />
                 <div key={index} className="relative my-6 mx-auto w-64 h-16">
-                  <div key={index + 1} className="absolute inset-0 bg-center bg-no-repeat bg-cover" style={{ backgroundImage: "url('/images/separador.png')" }}></div>
+                  <div key={index + 1} className="absolute inset-0 bg-center bg-no-repeat bg-cover" style={{ backgroundImage: "url('/images/separador.webp')" }}></div>
                 </div>
               </>
             ))}

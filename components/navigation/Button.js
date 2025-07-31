@@ -5,7 +5,7 @@ const Button = () => {
   return (
     <Link href="/">
       <Image
-        src="/images/mainLogo.png"
+        src="/images/mainLogo.webp"
         alt="Logo"
         width={100}
         height={100}

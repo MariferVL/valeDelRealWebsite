@@ -11,14 +11,14 @@ export default function AboutPage() {
         <>
             <main id="about-me" className='relative min-h-screen'>
                 {/* FIXME: */}
-                <div className="relative lg:w-screen lg:px-16 h-screen mt-0 mb-16 z-1 bg-[url('/images/naturaleza2.png')] bg-cover bg-center bg-no-repeat font-sans antialiased text-gray-900 overflow-y-auto overflow-x-hidden">
+                <div className="relative lg:w-screen lg:px-16 h-screen mt-0 mb-16 z-1 bg-[url('/images/naturaleza2.webp')] bg-cover bg-center bg-no-repeat font-sans antialiased text-gray-900 overflow-y-auto overflow-x-hidden">
 
                     <div className="w-full h-full flex items-center justify-center lg:h-screen flex-wrap mx-auto py-32 lg:mx-6 lg:mt-0">
                         <div id="profile" className="w-full lg:w-3/5 rounded-lg lg:rounded-l-lg lg:rounded-r-none shadow-2xl bg-white opacity-75 mx-6 lg:mx-0 flex flex-col justify-center">
 
                             <div className="p-4 md:p-12 text-center lg:text-left">
                                 {/* FIXME: */}
-                                <div className="block lg:hidden rounded-full shadow-xl mx-auto lg:mt-16 h-48 w-48 bg-[url('/images/vale4.jpg')] bg-cover bg-center">
+                                <div className="block lg:hidden rounded-full shadow-xl mx-auto lg:mt-16 h-48 w-48 bg-[url('/images/vale4.webp')] bg-cover bg-center">
                                 </div>
 
                                 <h1 className="text-3xl font-bold pt-8 lg:pt-0">Valeria del Real</h1>
@@ -130,7 +130,7 @@ export default function AboutPage() {
                             <div className="flex justify-center">
 
                                 <Image
-                                    src="/images/vale4.jpg"
+                                    src="/images/vale4.webp"
                                     alt="Foto de Valeria del Real sentada en un sillon con forma de bulba femenina"
                                     className="rounded-none lg:rounded-lg shadow-2xl lg:block hidden"
                                     width={1000}

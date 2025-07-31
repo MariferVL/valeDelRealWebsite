@@ -18,7 +18,7 @@ export default function Footer() {
         <div className="flex flex-col">
           <div className="flex mx-auto lg:mx-0 mt-6 mb-3 flex-row justify-between items-center text-sm">
             <div className="hidden md:block">
-              <Logo showButton={false} logoSrc="/images/mainLogo2.png" />
+              <Logo showButton={false} logoSrc="/images/mainLogo2.webp" />
             </div>
 
 

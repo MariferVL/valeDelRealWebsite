@@ -26,7 +26,7 @@ export default function NotFound() {
     <main>
 
       <Image
-        src={windowWidth >= 760 ? '/images/404-lg.png' : '/images/404-sm.png'}
+        src={windowWidth >= 760 ? '/images/404-lg.webp' : '/images/404-sm.webp'}
         alt="404 Error. Página No Encontrada"
         width={windowWidth < 700 ? 800 : 1366}
         height={windowWidth < 700 ? 800 : 768}

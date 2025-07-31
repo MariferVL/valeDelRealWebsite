@@ -22,8 +22,8 @@ export default function UnderConstruction() {
 
   const videoSrc =
     windowWidth > 700
-      ? '/videos/underConstructionVideolg.mp4'
-      : '/videos/underConstructionVideosm.mp4';
+      ? '/animations/constructionL.webm'
+      : '/animations/constructionS.webm';
 
   return (
     <div>
@@ -31,7 +31,7 @@ export default function UnderConstruction() {
       <video preload="auto" autoPlay muted loop>
         <source
           src={videoSrc}
-          alt="Video sobre página en construcción."
+          alt="Animación sobre página en construcción."
           type="video/mp4"
         />
         Tu navegador no admite la etiqueta de video.

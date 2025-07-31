@@ -61,7 +61,7 @@ export default function Navigation() {
       style={{ backgroundColor: `rgba(227, 166, 23, 0.3)`, backdropFilter: `blur(${blur}px)` }}
     >
       <div className="flex justify-between items-center mx-16">
-        <Logo showButton={showButton} logoSrc={isScrolling ? "/images/mainLogo2.png" : "/images/mainLogo1.png"} />
+        <Logo showButton={showButton} logoSrc={isScrolling ? "/images/mainLogo2.webp" : "/images/mainLogo1.webp"} />
 
         {/* Hamburger icon for mobile */}
 

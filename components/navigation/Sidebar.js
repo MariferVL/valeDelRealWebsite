@@ -38,7 +38,7 @@ export default function Sidebar({ closeSidebar }) {
                     <div className="flex items-center justify-between flex-shrink-0 w-64 p-4">
                         <Logo 
                         showButton={false} 
-                        logoSrc="/images/mainLogo2.png"
+                        logoSrc="/images/mainLogo2.webp"
                         closeSidebarOnClick={handleCloseSidebar}
                         />
                         <button
