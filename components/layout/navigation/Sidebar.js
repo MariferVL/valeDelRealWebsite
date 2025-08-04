@@ -95,7 +95,7 @@ export default function Sidebar({ closeSidebar }) {
                                     closeSidebarOnClick={handleCloseSidebar}
                                 />
                             </li>
-                            <li>
+                            {/* <li>
                                 <HoverLink
                                     href="/descargas"
                                     text="Descargables Espirituales"
@@ -105,7 +105,7 @@ export default function Sidebar({ closeSidebar }) {
                                     ariaLabel="Ir a la página de Descargables Espirituales"
                                     closeSidebarOnClick={handleCloseSidebar}
                                 />
-                            </li>
+                            </li> */}
                             {/* <li>
                                 <HoverLink
                                     href="/galeria"

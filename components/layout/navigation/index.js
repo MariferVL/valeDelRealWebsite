@@ -133,6 +133,17 @@ export default function Navigation() {
               ariaLabel="Ir a la página de Testimonios"
             />
           </li>
+          <li>
+            <HoverLink
+              href="/preguntas-frecuentes"
+              text="Preguntas Frecuentes"
+              title="Encuentra respuestas a preguntas frecuentes"
+              hoverText="Ingresa"
+              activeText="Ingresando"
+              ariaLabel="Ir a la página de Preguntas Frecuentes"
+              className="w-80"
+            />
+          </li>
           {/* Extra section: gallery and Q&A */}
           {/* <li className="group relative text-white flex items-center">
             <div>
@@ -192,7 +203,7 @@ export default function Navigation() {
               ariaLabel="Ir al Blog"
             />
           </li> */}
-          <li className="flex justify-between items-center">
+          <li className="flex pl-3 justify-between items-center">
             <div className="flex gap-2">
               <Link
                 href="https://api.whatsapp.com/send?phone=56990897824&text=Hola,%20quiero%20recibir%20informaci%C3%B3n%20de%20la%20Escuela%20de%20Sexualidad%20Sagrada%20Latinoamericana,%20gracias"
