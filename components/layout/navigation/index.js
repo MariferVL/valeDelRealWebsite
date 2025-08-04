@@ -10,7 +10,7 @@ import {
 } from "react-icons/fa";
 import Logo from "./Logo";
 import Sidebar from "./Sidebar";
-import HoverLink from "../HoverLink";
+import HoverLink from "../../ui/HoverLink";
 
 export default function Navigation() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);

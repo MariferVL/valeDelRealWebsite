@@ -2,7 +2,7 @@
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { FaInstagram, FaYoutube, FaTiktok, FaFacebook, FaWhatsapp } from 'react-icons/fa';
-import HoverLink from '../HoverLink';
+import HoverLink from '../../ui/HoverLink';
 import Logo from './Logo';
 
 export default function Sidebar({ closeSidebar }) {

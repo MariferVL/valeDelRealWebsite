@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-const Button = () => {
+export default function FloatingLogo() {
   return (
     <Link href="/">
       <Image
@@ -15,4 +15,3 @@ const Button = () => {
     </Link>
   );
 };
-export default Button;

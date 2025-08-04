@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import Button from "./Button";
+import FloatingLogo from "./FloatingLogo";
 
 export default function Logo({ showButton, logoSrc, closeSidebarOnClick }) {
   const handleClick = () => {
@@ -30,7 +30,7 @@ export default function Logo({ showButton, logoSrc, closeSidebarOnClick }) {
           display: showButton ? "block" : "none",
         }}
       >
-        <Button />
+        <FloatingLogo />
       </div>
     </>
   );

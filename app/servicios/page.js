@@ -1,4 +1,4 @@
-import ServiceCard from "@/components/servicecard";
+import ServiceCard from "@/components/ui/ServiceCard";
 
 const valeriaServices = [
   {

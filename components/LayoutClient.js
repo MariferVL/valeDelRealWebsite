@@ -1,8 +1,8 @@
 "use client";
 import { usePathname } from "next/navigation";
-import Navigation from "@/components/navigation";
-import Footer from "@/components/Footer";
-import SimpleFooter from "@/components/SimpleFooter";
+import Navigation from "@/components/layout/navigation";
+import Footer from "@/components/layout/Footer";
+import SimpleFooter from "@/components/layout/SimpleFooter";
 
 export default function LayoutClient({ children }) {
   const pathname = usePathname();
@@ -10,7 +10,7 @@ export default function LayoutClient({ children }) {
 
   return (
     <>
-      <Navigation />
+      <Navigation variant={isHomePage ? 'transparent' : 'default'} />
       {children}
       {isHomePage ? <SimpleFooter /> : <Footer />}
     </>
