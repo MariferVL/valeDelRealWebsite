@@ -123,7 +123,13 @@ a {
   height: 100%;
 }
 
-@media (max-width: 800px) {
+
+@media (max-width: 768px) {
+  .hero-background {
+    background-image: url('/images/heroe-mobile.webp');
+    background-position: bottom center;
+  }
+
 
   [data-hover]:hover::before,
   [data-hover]:active::before {

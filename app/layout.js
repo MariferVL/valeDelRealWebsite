@@ -2,8 +2,7 @@ import "./globals.css";
 import { Suspense } from "react";
 import Loading from "./dashboard/loading";
 import LayoutClient from "@/components/LayoutClient";
-import { montserrat, great_vibes } from "./fonts"; 
-
+import { montserrat, great_vibes } from "./fonts";
 
 export const metadata = {
   title: "Valeria Del Real - Escuela de Sexualidad Sagrada Latinoamericana",
@@ -19,11 +18,15 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="es" className={`${montserrat.variable} ${great_vibes.variable} h-full`}> 
+    <html
+      lang="es"
+      className={`${montserrat.variable} ${great_vibes.variable} h-full`}
+    >
       <head>
         <link rel="preload" href="/images/heroe.webp" as="image" />
+        <link rel="preload" href="/images/heroe-mobile.webp" as="image" />
       </head>
-      <body className="flex flex-col h-full bg-white"> 
+      <body className="flex flex-col h-full bg-white">
         <Suspense fallback={<Loading />}>
           <LayoutClient>{children}</LayoutClient>
         </Suspense>
