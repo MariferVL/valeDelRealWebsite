@@ -20,13 +20,13 @@ export default function RootLayout({ children }) {
   return (
     <html
       lang="es"
-      className={`${montserrat.variable} ${great_vibes.variable} h-full`}
+      className={`${montserrat.variable} ${great_vibes.variable}`}
     >
       <head>
         <link rel="preload" href="/images/heroe.webp" as="image" />
-        <link rel="preload" href="/images/heroe-mobile.webp" as="image" />
       </head>
-      <body className="flex flex-col h-full bg-white">
+      {/* CAMBIO CLAVE: Usamos min-h-screen para permitir que el contenido crezca y haga scroll */}
+      <body className="flex flex-col min-h-screen bg-white">
         <Suspense fallback={<Loading />}>
           <LayoutClient>{children}</LayoutClient>
         </Suspense>
