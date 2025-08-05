@@ -20,13 +20,13 @@ export default function RootLayout({ children }) {
   return (
     <html
       lang="es"
-      className={`${montserrat.variable} ${great_vibes.variable} h-full`}
+      className={`${montserrat.variable} ${great_vibes.variable}`}
     >
       <head>
         <link rel="preload" href="/images/hero.webp" as="image" />
         <link rel="preload" href="/images/hero-mobile.webp" as="image" />
       </head>
-      <body className="flex flex-col h-full bg-white">
+      <body>
         <Suspense fallback={<Loading />}>
           <LayoutClient>{children}</LayoutClient>
         </Suspense>

@@ -48,7 +48,7 @@ a {
 }
 
 .hero-background {
-  background-image: url('/images/heroe.webp');
+  background-image: url('/images/hero.webp');
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -126,7 +126,7 @@ a {
 
 @media (max-width: 768px) {
   .hero-background {
-    background-image: url('/images/heroe-mobile.webp');
+    background-image: url('/images/hero-mobile.webp');
     background-position: bottom center;
   }
 

@@ -102,7 +102,7 @@ export default function AboutPage() {
             <div className="relative h-64 overflow-hidden rounded-lg sm:h-80 lg:h-96 lg:order-last">
               <Image
                 alt="Imagen representando transformación y bienestar"
-                src="/images/w1.webp"
+                src="/images/vision.webp"
                 fill
                 className="rounded-lg object-cover"
               />
