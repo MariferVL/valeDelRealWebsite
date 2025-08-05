@@ -1,103 +1,71 @@
-import Link from 'next/link';
-import UnderConstruction from "@/components/underConstruction";
-import Footer from '@/components/layout/Footer';
+"use client";
+import { useState } from 'react';
+import FaqAccordion from '@/components/ui/FaqAccordion'; 
+
+const faqData = [
+  {
+    question: "¿Qué es la Sexualidad Sagrada?",
+    answer: "La Sexualidad Sagrada es una filosofía y práctica que ve la sexualidad como una fuerza vital y espiritual, una vía para la sanación, el autoconocimiento y la conexión profunda contigo mismo y con los demás. Va más allá del acto físico, integrando cuerpo, mente, emociones y espíritu."
+  },
+  {
+    question: "¿Necesito tener experiencia previa para unirme a un taller o formación?",
+    answer: "No, en absoluto. Mis programas están diseñados para recibir a personas de todos los niveles, desde quienes recién comienzan su camino de autodescubrimiento hasta facilitadores que buscan profundizar sus conocimientos. Lo único que necesitas es una mente y un corazón abiertos."
+  },
+  {
+    question: "¿En qué se diferencia una Formación de un Diplomado?",
+    answer: "La Formación Anual es un viaje profundo de 9 meses diseñado para quienes desean convertirse en facilitadores. El Diplomado es un programa más intensivo de 4 meses, enfocado en la transformación personal y en potenciar tu relación con la sexualidad y el amor propio."
+  },
+  {
+    question: "¿Las actividades online son realmente vivenciales?",
+    answer: "Sí. He desarrollado metodologías para que la experiencia online sea 100% vivencial y transformadora. Creamos un espacio sagrado y de confianza donde la conexión y la profundidad son igual de potentes que en un encuentro presencial."
+  },
+  {
+    question: "¿Qué es una Constelación Familiar?",
+    answer: "Es una terapia sistémica que nos permite mirar y sanar heridas profundas que a menudo provienen de nuestra historia familiar (biográficas, parentales y transgeneracionales). Es una herramienta poderosa para liberar bloqueos y encontrar un nuevo orden en tu vida."
+  },
+  {
+    question: "¿Cómo puedo inscribirme o agendar una sesión?",
+    answer: "Es muy fácil. Simplemente ve a la sección de 'Contacto' o haz clic en cualquiera de los botones de WhatsApp en el sitio para hablar directamente conmigo. Te guiaré en el proceso de inscripción y resolveré cualquier otra duda que tengas."
+  },
+];
 
 export default function FAQPage() {
-    return (
-        <><UnderConstruction />
-        
+  const [openIndex, setOpenIndex] = useState(null);
 
-        {/* // <main>
+  const handleClick = (index) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
 
-        //     <section className="bg-white dark:bg-gray-900">
-        //         <div className="container px-6 py-12 mx-auto">
-        //             <h1 className="text-2xl font-semibold text-center text-gray-800 lg:text-3xl dark:text-white">Have any Questions?</h1>
+  return (
+    <main>
+      <section 
+        className="relative w-full min-h-[50vh] flex items-center justify-center text-center text-white bg-cover bg-center"
+        style={{ backgroundImage: "url('/images/naturaleza2.webp')" }}
+      >
+        <div className="absolute inset-0 bg-black/60"></div>
+        <div className="relative z-10 px-4">
+          <h1 className="text-4xl md:text-6xl font-bold font-serif" style={{ textShadow: '2px 2px 8px rgba(0,0,0,0.7)' }}>
+            Preguntas Frecuentes
+          </h1>
+          <p className="mt-4 text-lg md:text-xl text-gray-200">
+            Encuentra respuestas a las dudas más comunes sobre mis servicios y la Sexualidad Sagrada.
+          </p>
+        </div>
+      </section>
 
-        //             <div className="mt-8 xl:mt-16 lg:flex lg:-mx-12">
-        //                 <div className="lg:mx-12">
-        //                     <h1 className="text-xl font-semibold text-gray-800 dark:text-white">Table of Content</h1>
-
-        //                     <div className="mt-4 space-y-4 lg:mt-8">
-        //                         <Link href="#" className="block text-blue-500 dark:text-blue-400 hover:underline">General</Link>
-        //                         <Link href="#" className="block text-gray-500 dark:text-gray-300 hover:underline">Trust & Safety</Link>
-        //                         <Link href="#" className="block text-gray-500 dark:text-gray-300 hover:underline">Services</Link>
-        //                         <Link href="#" className="block text-gray-500 dark:text-gray-300 hover:underline">Billing</Link>
-        //                         <Link href="#" className="block text-gray-500 dark:text-gray-300 hover:underline">Office Cleaning</Link>
-        //                     </div>
-        //                 </div>
-
-        //                 <div className="flex-1 mt-8 lg:mx-12 lg:mt-0">
-        //                     <div>
-        //                         <button className="flex items-center focus:outline-none">
-        //                             <svg className="flex-shrink-0 w-6 h-6 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M20 12H4"></path></svg>
-
-        //                             <h1 className="mx-4 text-xl text-gray-700 dark:text-white">How i can play for my appoinment ?</h1>
-        //                         </button>
-
-        //                         <div className="flex mt-8 md:mx-10">
-        //                             <span className="border border-blue-500"></span>
-
-        //                             <p className="max-w-3xl px-4 text-gray-500 dark:text-gray-300">
-        //                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, eum quae. Harum officiis reprehenderit ex quia ducimus minima id provident molestias optio nam vel, quidem iure voluptatem, repellat et ipsa.
-        //                             </p>
-        //                         </div>
-        //                     </div>
-
-        //                     <hr className="my-8 border-gray-200 dark:border-gray-700" />
-
-        //                     <div>
-        //                         <button className="flex items-center focus:outline-none">
-        //                             <svg xmlns="http://www.w3.org/2000/svg" className="flex-shrink-0 w-6 h-6 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        //                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 4v16m8-8H4" />
-        //                             </svg>
-
-        //                             <h1 className="mx-4 text-xl text-gray-700 dark:text-white">What can i expect at my first consultation ?</h1>
-        //                         </button>
-        //                     </div>
-
-        //                     <hr className="my-8 border-gray-200 dark:border-gray-700" />
-
-        //                     <div>
-        //                         <button className="flex items-center focus:outline-none">
-        //                             <svg xmlns="http://www.w3.org/2000/svg" className="flex-shrink-0 w-6 h-6 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        //                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 4v16m8-8H4" />
-        //                             </svg>
-
-        //                             <h1 className="mx-4 text-xl text-gray-700 dark:text-white">What are your opening house ?</h1>
-        //                         </button>
-        //                     </div>
-
-        //                     <hr className="my-8 border-gray-200 dark:border-gray-700" />
-
-        //                     <div>
-        //                         <button className="flex items-center focus:outline-none">
-        //                             <svg xmlns="http://www.w3.org/2000/svg" className="flex-shrink-0 w-6 h-6 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        //                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 4v16m8-8H4" />
-        //                             </svg>
-
-        //                             <h1 className="mx-4 text-xl text-gray-700 dark:text-white">Do i need a referral ?</h1>
-        //                         </button>
-        //                     </div>
-
-        //                     <hr className="my-8 border-gray-200 dark:border-gray-700" />
-
-        //                     <div>
-        //                         <button className="flex items-center focus:outline-none">
-        //                             <svg xmlns="http://www.w3.org/2000/svg" className="flex-shrink-0 w-6 h-6 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        //                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 4v16m8-8H4" />
-        //                             </svg>
-
-        //                             <h1 className="mx-4 text-xl text-gray-700 dark:text-white">Is the cost of the appoinment covered by private health insurance ?</h1>
-        //                         </button>
-        //                     </div>
-        //                 </div>
-        //             </div>
-        //         </div>
-        //     </section>
-
-
-        // </main> */}
-
-        </>
-    )
+      <section className="py-16">
+        <div className="mx-auto max-w-3xl px-4">
+          {faqData.map((faq, index) => (
+            <FaqAccordion
+              key={index}
+              question={faq.question}
+              answer={faq.answer}
+              isOpen={openIndex === index}
+              onClick={() => handleClick(index)}
+            />
+          ))}
+        </div>
+      </section>
+    </main>
+  );
 }
