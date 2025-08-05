@@ -35,7 +35,6 @@ export default function ServicesPage() {
         style={{ backgroundImage: "url('/images/hero_services.webp')" }}
       >
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
-
         <motion.div
           className="relative max-w-2xl px-4 z-10"
           variants={staggerContainer}
@@ -65,7 +64,6 @@ export default function ServicesPage() {
               {...service}
               imagePosition={index % 2 === 0 ? "left" : "right"}
             />
-
             {index < valeriaServices.length - 1 && (
               <div className="relative my-12 mx-auto w-64 h-16">
                 <div
